@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef0cdd1f-3527-4091-b776-a3584d548703" name="Changes" comment="">
+    <list default="true" id="dc8cb222-7fef-4032-b2ee-eef86d8b4229" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/DictionaryApp/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/DictionaryApp/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/DictionaryApp/.idea/gradle.xml" afterDir="false" />
@@ -111,54 +111,54 @@
       <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/src/main/webapp/customers/info.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/src/main/webapp/customers/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/src/main/java/com/codegym/configuration/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/src/main/java/com/codegym/configuration/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/src/main/java/com/codegym/controller/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/src/main/java/com/codegym/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/src/main/java/com/codegym/services/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/src/main/java/com/codegym/services/ICustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/src/main/webapp/WEB-INF/views/view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer-management-thymeleaf/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/customer_management_thymeleaf/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/product_management_thymeleaf/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/product_management_thymeleaf/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/product_management_thymeleaf/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/product_management_thymeleaf/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/product_management_thymeleaf/src/main/java/com/codegym/configuration/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/product_management_thymeleaf/src/main/java/com/codegym/configuration/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/product_management_thymeleaf/src/main/java/com/codegym/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/product_management_thymeleaf/src/main/java/com/codegym/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/product_management_thymeleaf/src/main/java/com/codegym/repository/IProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/product_management_thymeleaf/src/main/java/com/codegym/repository/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/product_management_thymeleaf/src/main/java/com/codegym/services/IProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/product_management_thymeleaf/src/main/java/com/codegym/services/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/product_management_thymeleaf/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/product_management_thymeleaf/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/product_management_thymeleaf/src/main/webapp/WEB-INF/views/createProduct.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/product_management_thymeleaf/src/main/webapp/WEB-INF/views/deleteProduct.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/product_management_thymeleaf/src/main/webapp/WEB-INF/views/editProduct.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/product_management_thymeleaf/src/main/webapp/WEB-INF/views/indexProduct.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/product_management_thymeleaf/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/product_management_thymeleaf/src/main/webapp/WEB-INF/views/viewProduct.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_3_ Views_Thymeleaf/product_management_thymeleaf/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/configuration/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/configuration/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/services/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/services/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/java/com/codegym/configuration/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/java/com/codegym/configuration/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/java/com/codegym/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/java/com/codegym/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/java/com/codegym/repository/IProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/java/com/codegym/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/java/com/codegym/services/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/java/com/codegym/services/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/webapp/WEB-INF/views/createProduct.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/webapp/WEB-INF/views/deleteProduct.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/webapp/WEB-INF/views/editProduct.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/webapp/WEB-INF/views/indexProduct.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/webapp/WEB-INF/views/viewProduct.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/DictionaryApp/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/DictionaryApp/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/DictionaryApp/.idea/gradle.xml" beforeDir="false" />
@@ -265,28 +265,22 @@
       <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/src/main/webapp/customers/info.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/src/main/webapp/customers/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-management" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_2_ Spring_Controller/calculator/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../_2_ Spring_Controller/calculator/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_2_ Spring_Controller/calculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../_2_ Spring_Controller/calculator/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_2_ Spring_Controller/customer-management" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Jsp File" />
-        <option value="Class" />
-        <option value="Interface" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
@@ -301,41 +295,38 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2D1H3NzwIOL2tAEwt7etUDICtLR" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2D1Y7A4XGBTU5Zb5gooQ8Y0UlXb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Module4/James/_2_ Spring_Controller/calculator",
-    "spring.configuration.checksum": "5b202712e84cb9331e0116991c784294"
+    "last_opened_file_path": "D:/Module4/James/_2_ Spring_Controller/customer-management - Copy"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Module4\James\_2_ Spring_Controller\calculator\src\main\webapp\WEB-INF" />
+      <recent name="D:\Module4\James\_3_ Views_Thymeleaf\customer-management-thymeleaf\src\main\webapp\WEB-INF" />
+      <recent name="D:\Module4\James\_3_ Views_Thymeleaf\customer-management-thymeleaf\src\main\java\com\codegym" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 9.0.64" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.64" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="UPDATING_POLICY" value="hot-swap-classes" />
+    <configuration name="Tomcat 9.0.64" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.64" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="Gradle : com.codegym : calculator-1.0-SNAPSHOT.war">
+        <artifact name="Gradle : com.codegym : customer-management-thymeleaf-1.0-SNAPSHOT.war">
           <settings>
             <option name="CONTEXT_PATH" value="" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="d256096b-fde5-406f-9e03-7a6d878bf524" />
+        <option name="BASE_DIRECTORY_NAME" value="7b6ed9be-e665-4493-9d87-d2bcaebbbb7e" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -343,7 +334,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="8945" />
+        <option name="DEBUG_PORT" value="11627" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -408,7 +399,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="Gradle : com.codegym : calculator-1.0-SNAPSHOT.war" />
+          <artifact name="Gradle : com.codegym : customer-management-thymeleaf-1.0-SNAPSHOT.war" />
         </option>
       </method>
     </configuration>
@@ -416,15 +407,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ef0cdd1f-3527-4091-b776-a3584d548703" name="Changes" comment="" />
-      <created>1659859471792</created>
+      <changelist id="dc8cb222-7fef-4032-b2ee-eef86d8b4229" name="Changes" comment="" />
+      <created>1659867889429</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1659859471792</updated>
-      <workItem from="1659859473038" duration="3061000" />
-      <workItem from="1659863313302" duration="1843000" />
-      <workItem from="1659868812570" duration="149000" />
-      <workItem from="1659874697450" duration="1449000" />
+      <updated>1659867889429</updated>
+      <workItem from="1659867891097" duration="3497000" />
     </task>
     <servers />
   </component>
@@ -441,8 +429,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
