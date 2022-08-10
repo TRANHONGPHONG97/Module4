@@ -5,8 +5,9 @@ import javax.persistence.*;
 @Entity
 @Table(name = "customers")
 public class Customer {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
     private String firstName;
     private String lastName;
@@ -15,8 +16,7 @@ public class Customer {
     private Province province;
 
 
-    public Customer() {
-    }
+    public Customer() {}
 
     public Customer(String firstName, String lastName) {
         this.firstName = firstName;
