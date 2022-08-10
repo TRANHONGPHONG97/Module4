@@ -6,15 +6,21 @@ import com.codegym.cms.service.customer.ICustomerService;
 import com.codegym.cms.service.province.IProvinceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
 import java.util.Optional;
 
 @Controller
-public class CustomerController {
+
+public class CustomerController  {
 
     @Autowired
     private ICustomerService customerService;
@@ -29,6 +35,7 @@ public class CustomerController {
 
 
     @GetMapping("/create-customer")
+
     public ModelAndView showCreateForm() {
         ModelAndView modelAndView = new ModelAndView("/customer/create");
         modelAndView.addObject("customer", new Customer());
@@ -44,9 +51,26 @@ public class CustomerController {
         return modelAndView;
     }
 
+//    @GetMapping("/customers")
+//    public ModelAndView listCustomers(@RequestParam("search") Optional<String> search, @RequestParam("page")Optional<Integer>page){
+//        Page<Customer> customers;
+//
+//        int number=0;
+//        if (page.isPresent() && page.get()>1) number=page.get()-1;
+//        Pageable pageable = PageRequest.of(1, 3);
+//        if(search.isPresent()){
+//            customers = customerService.findAllByFirstNameContaining(search.get(), pageable);
+//        } else {
+//            customers = customerService.findAll(pageable);
+//        }
+//        ModelAndView modelAndView = new ModelAndView("/customer/list");
+//        modelAndView.addObject("customers", customers);
+//        return modelAndView;
+//    }
     @GetMapping("/customers")
     public ModelAndView listCustomers(@RequestParam("search") Optional<String> search, Pageable pageable){
         Page<Customer> customers;
+
         if(search.isPresent()){
             customers = customerService.findAllByFirstNameContaining(search.get(), pageable);
         } else {
@@ -56,6 +80,8 @@ public class CustomerController {
         modelAndView.addObject("customers", customers);
         return modelAndView;
     }
+
+
 
 
     @GetMapping("/edit-customer/{id}")
