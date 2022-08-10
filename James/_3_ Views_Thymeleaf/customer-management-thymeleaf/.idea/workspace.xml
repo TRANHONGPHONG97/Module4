@@ -5,269 +5,79 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc8cb222-7fef-4032-b2ee-eef86d8b4229" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/DictionaryApp/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/DictionaryApp/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/DictionaryApp/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/DictionaryApp/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/DictionaryApp/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/DictionaryApp/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/DictionaryApp/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/DictionaryApp/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/DictionaryApp/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/DictionaryApp/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/DictionaryApp/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/DictionaryApp/src/main/java/com/codegym/HelloServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/DictionaryApp/src/main/java/com/codegym/controller/DictionaryAppController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/DictionaryApp/src/main/java/com/codegym/filter/UTF8Filter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/DictionaryApp/src/main/java/com/codegym/service/Dictionary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/DictionaryApp/src/main/java/com/codegym/service/IDictionary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/DictionaryApp/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/DictionaryApp/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/DictionaryApp/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/DictionaryApp/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/DictionaryApp/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/SpringGreeting/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/SpringGreeting/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/SpringGreeting/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/SpringGreeting/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/SpringGreeting/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/SpringGreeting/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/SpringGreeting/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/SpringGreeting/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/SpringGreeting/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/SpringGreeting/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/SpringGreeting/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/SpringGreeting/src/main/java/com/codegym/controller/GreetingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/SpringGreeting/src/main/java/com/codegym/controller/HelloServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/SpringGreeting/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/SpringGreeting/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/SpringGreeting/src/main/webapp/WEB-INF/views/views.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/SpringGreeting/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/SpringGreeting/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/currency_conversion/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/currency_conversion/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/currency_conversion/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/currency_conversion/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/currency_conversion/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/currency_conversion/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/currency_conversion/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/currency_conversion/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/currency_conversion/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/currency_conversion/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/currency_conversion/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/currency_conversion/src/main/java/com/codegym/HelloServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/currency_conversion/src/main/java/com/codegym/controller/CurrencyConversionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/currency_conversion/src/main/java/com/codegym/filter/UTF8Filter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/currency_conversion/src/main/java/com/codegym/service/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/currency_conversion/src/main/java/com/codegym/service/ICalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/currency_conversion/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/currency_conversion/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/currency_conversion/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/currency_conversion/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/currency_conversion/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/.gradle/4.10.3/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/.gradle/4.10.3/fileContent/fileContent.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/.gradle/4.10.3/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/.gradle/4.10.3/javaCompile/taskHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/build/classes/java/main/cg/wbd/grandemonstration/model/Customer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/build/classes/java/main/cg/wbd/grandemonstration/service/CustomerService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/build/classes/java/main/cg/wbd/grandemonstration/service/CustomerServiceFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/build/classes/java/main/cg/wbd/grandemonstration/service/impl/SimpleCustomerServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/build/classes/java/main/cg/wbd/grandemonstration/servlet/CustomerController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/build/classes/java/main/cg/wbd/grandemonstration/servlet/CustomerServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/build/libs/Gran Demonstration-1.0-SNAPSHOT.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/build/tmp/war/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/src/main/java/cg/wbd/grandemonstration/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/src/main/java/cg/wbd/grandemonstration/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/src/main/java/cg/wbd/grandemonstration/service/CustomerServiceFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/src/main/java/cg/wbd/grandemonstration/service/impl/SimpleCustomerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/src/main/java/cg/wbd/grandemonstration/servlet/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/src/main/java/cg/wbd/grandemonstration/servlet/CustomerServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/src/main/webapp/WEB-INF/app-conf.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/src/main/webapp/customers/info.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../_1_Spring_MVC/customer_management - Copy/src/main/webapp/customers/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/configuration/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/configuration/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/services/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/services/ICustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/java/com/codegym/configuration/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/java/com/codegym/configuration/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/java/com/codegym/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/java/com/codegym/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/java/com/codegym/repository/IProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/java/com/codegym/repository/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/java/com/codegym/services/IProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/java/com/codegym/services/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/webapp/WEB-INF/views/createProduct.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/webapp/WEB-INF/views/deleteProduct.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/webapp/WEB-INF/views/editProduct.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/webapp/WEB-INF/views/indexProduct.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_management_thymeleaf/src/main/webapp/WEB-INF/views/viewProduct.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/DictionaryApp/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/DictionaryApp/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/DictionaryApp/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/DictionaryApp/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/DictionaryApp/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/DictionaryApp/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/DictionaryApp/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/DictionaryApp/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/DictionaryApp/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/DictionaryApp/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/DictionaryApp/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/DictionaryApp/src/main/java/com/codegym/HelloServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/DictionaryApp/src/main/java/com/codegym/controller/DictionaryAppController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/DictionaryApp/src/main/java/com/codegym/filter/UTF8Filter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/DictionaryApp/src/main/java/com/codegym/service/Dictionary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/DictionaryApp/src/main/java/com/codegym/service/IDictionary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/DictionaryApp/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/DictionaryApp/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/DictionaryApp/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/DictionaryApp/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/DictionaryApp/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/SpringGreeting/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/SpringGreeting/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/SpringGreeting/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/SpringGreeting/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/SpringGreeting/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/SpringGreeting/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/SpringGreeting/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/SpringGreeting/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/SpringGreeting/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/SpringGreeting/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/SpringGreeting/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/SpringGreeting/src/main/java/com/codegym/controller/GreetingController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/SpringGreeting/src/main/java/com/codegym/controller/HelloServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/SpringGreeting/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/SpringGreeting/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/SpringGreeting/src/main/webapp/WEB-INF/views/views.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/SpringGreeting/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/SpringGreeting/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/currency_conversion/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/currency_conversion/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/currency_conversion/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/currency_conversion/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/currency_conversion/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/currency_conversion/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/currency_conversion/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/currency_conversion/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/currency_conversion/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/currency_conversion/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/currency_conversion/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/currency_conversion/src/main/java/com/codegym/HelloServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/currency_conversion/src/main/java/com/codegym/controller/CurrencyConversionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/currency_conversion/src/main/java/com/codegym/filter/UTF8Filter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/currency_conversion/src/main/java/com/codegym/service/Calculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/currency_conversion/src/main/java/com/codegym/service/ICalculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/currency_conversion/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/currency_conversion/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/currency_conversion/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/currency_conversion/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/currency_conversion/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/.gradle/4.10.3/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/.gradle/4.10.3/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/.gradle/4.10.3/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/.gradle/4.10.3/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/.idea/webContexts.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/build/classes/java/main/cg/wbd/grandemonstration/model/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/build/classes/java/main/cg/wbd/grandemonstration/service/CustomerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/build/classes/java/main/cg/wbd/grandemonstration/service/CustomerServiceFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/build/classes/java/main/cg/wbd/grandemonstration/service/impl/SimpleCustomerServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/build/classes/java/main/cg/wbd/grandemonstration/servlet/CustomerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/build/classes/java/main/cg/wbd/grandemonstration/servlet/CustomerServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/build/libs/Gran Demonstration-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/src/main/java/cg/wbd/grandemonstration/model/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/src/main/java/cg/wbd/grandemonstration/service/CustomerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/src/main/java/cg/wbd/grandemonstration/service/CustomerServiceFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/src/main/java/cg/wbd/grandemonstration/service/impl/SimpleCustomerServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/src/main/java/cg/wbd/grandemonstration/servlet/CustomerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/src/main/java/cg/wbd/grandemonstration/servlet/CustomerServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/src/main/webapp/WEB-INF/app-conf.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/src/main/webapp/customers/info.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_1_Spring MVC/customer_management - Copy/src/main/webapp/customers/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_2_ Spring_Controller/calculator/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../_2_ Spring_Controller/calculator/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_2_ Spring_Controller/calculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../_2_ Spring_Controller/calculator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../_2_ Spring_Controller/customer-management" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/UploadFile/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/UploadFile/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/UploadFile/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/UploadFile/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/UploadFile/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/UploadFile/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/UploadFile/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/UploadFile/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/UploadFile/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/UploadFile/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/UploadFile/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/UploadFile/src/main/java/com/codegym/configuration/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/UploadFile/src/main/java/com/codegym/configuration/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/UploadFile/src/main/java/com/codegym/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/UploadFile/src/main/java/com/codegym/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/UploadFile/src/main/java/com/codegym/model/ProductForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/UploadFile/src/main/java/com/codegym/model/Upload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/UploadFile/src/main/java/com/codegym/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/UploadFile/src/main/java/com/codegym/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/UploadFile/src/main/java/com/codegym/service/UploadFileService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/UploadFile/src/main/resources/upload_file.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/UploadFile/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/UploadFile/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/UploadFile/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-mvc-form-tutorial/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-mvc-form-tutorial/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-mvc-form-tutorial/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-mvc-form-tutorial/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-mvc-form-tutorial/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-mvc-form-tutorial/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-mvc-form-tutorial/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-mvc-form-tutorial/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-mvc-form-tutorial/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-mvc-form-tutorial/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-mvc-form-tutorial/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-mvc-form-tutorial/src/main/java/com/codegym/controller/EmployeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-mvc-form-tutorial/src/main/java/com/codegym/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-mvc-form-tutorial/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-mvc-form-tutorial/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-mvc-form-tutorial/src/main/webapp/WEB-INF/views/employee/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-mvc-form-tutorial/src/main/webapp/WEB-INF/views/employee/info.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-mvc-form-tutorial/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-user-model/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-user-model/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-user-model/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-user-model/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-user-model/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-user-model/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-user-model/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-user-model/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-user-model/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-user-model/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-user-model/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-user-model/src/main/java/com/codegym/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-user-model/src/main/java/com/codegym/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-user-model/src/main/java/com/codegym/model/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-user-model/src/main/java/com/codegym/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-user-model/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-user-model/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-user-model/src/main/webapp/WEB-INF/views/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-user-model/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-user-model/src/main/webapp/WEB-INF/views/user.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_4_Data Binding_Form/spring-user-model/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/Bootstrap Banking Transaction Management/Banking/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/Bootstrap Banking Transaction Management/Banking/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/Bootstrap Banking Transaction Management/Banking/deposit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/Bootstrap Banking Transaction Management/Banking/deposit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/Bootstrap Banking Transaction Management/Banking/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/Bootstrap Banking Transaction Management/Banking/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/Bootstrap Banking Transaction Management/Banking/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/Bootstrap Banking Transaction Management/Banking/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/Bootstrap Banking Transaction Management/Banking/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/Bootstrap Banking Transaction Management/Banking/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/Bootstrap Banking Transaction Management/Banking/suspended.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/Bootstrap Banking Transaction Management/Banking/suspended.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/Bootstrap Banking Transaction Management/Banking/transfer.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/Bootstrap Banking Transaction Management/Banking/transfer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/Bootstrap Banking Transaction Management/Banking/transferInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/Bootstrap Banking Transaction Management/Banking/transferInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_2_ Spring_Controller/sandwich_condiment/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../_2_ Spring_Controller/sandwich_condiment/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,7 +116,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Module4/James/_2_ Spring_Controller/customer-management - Copy"
+    "last_opened_file_path": "D:/Module4/James/_2_ Spring_Controller/calculator",
+    "spring.configuration.checksum": "7745dd3173f1530345f14c3876948ea3"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -413,6 +224,7 @@
       <option name="presentableId" value="Default" />
       <updated>1659867889429</updated>
       <workItem from="1659867891097" duration="3497000" />
+      <workItem from="1659943107396" duration="590000" />
     </task>
     <servers />
   </component>

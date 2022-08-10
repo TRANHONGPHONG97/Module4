@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Information</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <form action="/customers/update" method="post" th:object="${customer}">
+
+        <!--<form th:action="@{/customers/__${customer.id}__}" method="post" th:object="${customer}">-->
+        <fieldset>
+            <h1 style="text-align: center">Customer Information</h1>
+            <input type="hidden" th:field="*{id}">
+
+<!--                <tr>-->
+<!--                    <td>Id</td>-->
+<!--                    <td th:text="*{id}"></td>-->
+<!--                </tr>-->
+                <div class="mb-3">
+                    <label class="form-label">NAME</label>
+                    <input type="text" style="font-size: 25px" class="form-control" th:field="*{fullName}" placeholder="input name">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">EMAIL</label>
+                    <input type="text" style="font-size: 25px" class="form-control" th:field="*{email}" placeholder="input email">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">PHONE</label>
+                    <input type="text" style="font-size: 25px" class="form-control" th:field="*{phone}" placeholder="input phone">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">ADDRESS</label>
+                    <input type="text" style="font-size: 25px" class="form-control" th:field="*{address}" placeholder="input address">
+                </div>
+
+                <div><input type="submit" class="btn btn-secondary" value="Update">
+                    <div class="btn-group">
+                        <a href="/customers" class="btn btn-primary">
+                            <i class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></i> Back
+                        </a>
+                    </div>
+                </div>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>

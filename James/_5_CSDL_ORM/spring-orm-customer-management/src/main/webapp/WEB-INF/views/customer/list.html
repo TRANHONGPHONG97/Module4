@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer List</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+
+</head>
+    <style>
+        table {
+            border: 1px solid #000;
+        }
+
+        th, td {
+            border: 1px dotted #555;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1 style="text-align: center">List of Customers</h1>
+    <p style="text-align: center">There are <span th:text="${customers.size()}"></span> customer(s).</p>
+    <div class="col-sm-3">
+        <a style="font-size: larger"  class="btn btn-success" href="/customers/create" title=""><i class="bi bi-plus-circle-fill"></i>
+            Create New Customer</a>
+    </div>
+
+<!--    <div>-->
+<!--        <form th:action="@{/customers/search }" th:object="${customers}" method="get" novalidate="novalidate">-->
+<!--            &lt;!&ndash;/*@thymesVar id="fullName" type="com"*/&ndash;&gt;-->
+<!--            <input type="text" th:field="">-->
+<!--            <input type="submit" value="Search">-->
+<!--        </form>-->
+<!--    </div>-->
+
+    <table class="table table-striped">
+        <thead class="table-info">
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="c : ${customers}">
+            <td th:text="${c.id}"></td>
+            <td th:text="${c.fullName}"></td>
+            <td th:text="${c.email}"></td>
+            <td th:text="${c.phone}"></td>
+            <td th:text="${c.address}"></td>
+            <td>
+                <a th:href="@{/customers/{id}(id=${c.id})}"
+                   class="btn btn-secondary"> Update </a>
+                <a th:href="@{/customers/delete-customer/{id}(id=${c.id})}"
+                   class="btn btn-danger"> Delete</a>
+                <a th:href="@{/customers/{id}/view(id=${c.id})}"
+                   class="btn btn-info"> View</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>
