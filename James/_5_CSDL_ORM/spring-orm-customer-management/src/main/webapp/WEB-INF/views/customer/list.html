@@ -6,15 +6,15 @@
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
 
 </head>
-    <style>
-        table {
-            border: 1px solid #000;
-        }
+<style>
+    table {
+        border: 1px solid #000;
+    }
 
-        th, td {
-            border: 1px dotted #555;
-        }
-    </style>
+    th, td {
+        border: 1px dotted #555;
+    }
+</style>
 </head>
 <body>
 <div class="container">
@@ -22,17 +22,30 @@
     <h1 style="text-align: center">List of Customers</h1>
     <p style="text-align: center">There are <span th:text="${customers.size()}"></span> customer(s).</p>
     <div class="col-sm-3">
-        <a style="font-size: larger"  class="btn btn-success" href="/customers/create" title=""><i class="bi bi-plus-circle-fill"></i>
+        <a style="font-size: larger" class="btn btn-success" href="/customers/create" title=""><i
+                class="bi bi-plus-circle-fill"></i>
             Create New Customer</a>
+        <div class="row">
+            <form action="/customers/search" method="get">
+                <div>
+                    <input type="text" class="form-control" name="search">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-outline-success">
+                        Search
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 
-<!--    <div>-->
-<!--        <form th:action="@{/customers/search }" th:object="${customers}" method="get" novalidate="novalidate">-->
-<!--            &lt;!&ndash;/*@thymesVar id="fullName" type="com"*/&ndash;&gt;-->
-<!--            <input type="text" th:field="">-->
-<!--            <input type="submit" value="Search">-->
-<!--        </form>-->
-<!--    </div>-->
+    <!--    <div>-->
+    <!--        <form th:action="@{/customers/search }" th:object="${customers}" method="get" novalidate="novalidate">-->
+    <!--            &lt;!&ndash;/*@thymesVar id="fullName" type="com"*/&ndash;&gt;-->
+    <!--            <input type="text" th:field="">-->
+    <!--            <input type="submit" value="Search">-->
+    <!--        </form>-->
+    <!--    </div>-->
 
     <table class="table table-striped">
         <thead class="table-info">
@@ -57,7 +70,7 @@
                    class="btn btn-secondary"> Update </a>
                 <a th:href="@{/customers/delete-customer/{id}(id=${c.id})}"
                    class="btn btn-danger"> Delete</a>
-                <a th:href="@{/customers/{id}/view(id=${c.id})}"
+                <a th:href="@{/customers/view/{id}(id=${c.id})}"
                    class="btn btn-info"> View</a>
             </td>
         </tr>

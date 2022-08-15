@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/style.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <div class="row">
+                <div class="col-sm-5">
+                    <h1>Transfer money Information</h1>
+                </div>
+                <div class="col-sm-7">
+                    <a href="../customer/index.html" class="btn btn-outline-light" style="margin-right: 40px;">
+                        <i class="fas fa-list"></i>
+                        <span>Customer list</span>                        
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <form action="#">
+            <fieldset>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <label for="senderId" class="form-label">Sender ID</label>
+                        <input type="text" name="senderId" id="senderId" class="form-control">
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="senderName" class="form-label">Sender Name</label>
+                        <input type="text" name="senderName" id="senderName" class="form-control">
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="text" name="email" id="email" class="form-control">
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="balance" class="form-label">Sender balance</label>
+                        <input type="text" name="balance" id="balance" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                            <label for="recipient_id" class="col-sm-12 form-label">Recipient Name</label>
+                            <div class="col-sm-12">
+                                <select id="recipient_id" class="form-select valid" name="recipientId" aria-invalid="false">
+                                    <option value="1">(1) Phong</option>
+                                    <option value="2">(2) Trí</option>
+                                    <option value="3">(3) Minh</option>
+                                    <option value="4">(4) Lộc</option>
+                                    <option value="5">(5) Trung</option>
+                                    
+                                </select>
+                            </div>
+                        <!-- </div> -->
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="amount" class="form-label">Transaction Amount ($)</label>
+                        <input type="text" name="amount" id="amount" class="form-control">
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="fees" class="form-label">Fees (%)</label>
+                        <input type="text" name="fees" id="fees" class="form-control" value="10" disabled>
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="totalAmount" class="form-label">Total amount of transaction ($)</label>
+                        <input type="text" name="totalAmount" id="totalAmount" class="form-control">
+                    </div>
+                </div>
+
+                <div class="row create">
+                    <div class="col-sm-12">
+                        <button class="btn btn-outline-primary">
+                            <i class="fas fa-exchange-alt"> Transfer</i>
+                        </button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

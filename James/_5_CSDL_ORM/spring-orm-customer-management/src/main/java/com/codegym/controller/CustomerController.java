@@ -1,15 +1,14 @@
 package com.codegym.controller;
 
 import com.codegym.model.Customer;
-import com.codegym.service.HibernateCustomerService;
-import com.codegym.service.impl.HibernateCustomerServiceImpl;
+import com.codegym.service.CustomerService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.awt.print.Pageable;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,16 +16,23 @@ import java.util.Optional;
 @RequestMapping("/customers")
 public class CustomerController {
 
-    @Autowired
-    private HibernateCustomerService hibernateCustomerService;
-//    HibernateCustomerService hibernateCustomerService = new HibernateCustomerServiceImpl();
+//    @Autowired
+//    private HibernateCustomerService hibernateCustomerService;
 
-    @GetMapping()
+    @Autowired
+    private CustomerService customerService;
+
+    @GetMapping
     public ModelAndView showCustomerListPage() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("customer/list");
-        List<Customer> customerList = hibernateCustomerService.findAll();
+
+//        List<Customer> customerList = hibernateCustomerService.findAll();
+
+        List<Customer> customerList = customerService.findAll();
+
         modelAndView.addObject("customers", customerList);
+
         return modelAndView;
     }
 
@@ -34,8 +40,18 @@ public class CustomerController {
     public ModelAndView showCustomerByIdPage(@PathVariable Long id) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("customer/info");
-        Customer customer = hibernateCustomerService.findOne(id);
-        modelAndView.addObject("customer", customer);
+
+//        Customer customer = hibernateCustomerService.findById(id);
+
+        Optional<Customer> customer = customerService.findById(id);
+
+        if (!customer.isPresent()) {
+            modelAndView.setViewName("error.404");
+            return modelAndView;
+        }
+
+        modelAndView.addObject("customer", customer.get());
+
         return modelAndView;
     }
 
@@ -43,63 +59,83 @@ public class CustomerController {
     public ModelAndView showCreatePage() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("customer/create");
+
         Customer customer = new Customer();
         modelAndView.addObject("customer", customer);
+
         return modelAndView;
     }
-    @GetMapping("/{id}/view")
-    public String view(@PathVariable Long id, Model model) {
-        model.addAttribute("customer", hibernateCustomerService.findOne(id));
-        return "customer/view";
+
+    @GetMapping("/search")
+    public ModelAndView showSearchResultPage(@RequestParam String search) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("customer/list");
+
+        search = "%" + search + "%";
+
+//        List<Customer> customerList = customerService.findByFullNameLike(search);
+
+//        List<Customer> customerList = customerService.findByFullNameLikeOrEmailLikeOrPhoneLikeOrAddressLike(search, search, search, search);
+
+        List<Customer> customerList = customerService.findAllBySearchKey(search);
+
+        modelAndView.addObject("customers", customerList);
 
 
+        return modelAndView;
     }
-//    @GetMapping("/customers")
-//    public ModelAndView listCustomers(@RequestParam("search") Optional<String> search, Pageable pageable){
-//        Page<Customer> customers;
-//        if(search.isPresent()){
-//            customers = hibernateCustomerService.findAllByFirstNameContaining(search.get(), pageable);
-//        } else {
-//            customers = hibernateCustomerService.findAll(pageable);
-//        }
-//        ModelAndView modelAndView = new ModelAndView("/customer/list");
-//        modelAndView.addObject("customers", customers);
-//        return modelAndView;
-//    }
-//    @GetMapping("/search")
-//    public String search(Customer customer, Model model) {
-//        model.addAttribute("customerList", hibernateCustomerService.searchByName(customer));
-//        return "customer/list";
-//    }
 
     @PostMapping("/create")
     public String doCreate(@ModelAttribute Customer customer) {
-        hibernateCustomerService.save(customer);
+//        hibernateCustomerService.save(customer);
+
+        customer.setId(0L);
+        customerService.save(customer);
         return "redirect:/customers";
     }
 
+
     @PostMapping("/update")
     public String doUpdate(@ModelAttribute Customer customer) {
-        hibernateCustomerService.save(customer);
+//        hibernateCustomerService.save(customer);
+
+        customerService.save(customer);
+
         return "redirect:/customers";
     }
+
     @GetMapping("/delete-customer/{id}")
     public ModelAndView showDeleteForm(@PathVariable Long id) {
-        Customer customer = hibernateCustomerService.findOne(id);
-        if (customer != null) {
+        Optional<Customer> customer = customerService.findById(id);
+        if (customer.isPresent()) {
             ModelAndView modelAndView = new ModelAndView("/customer/delete");
             modelAndView.addObject("customer", customer);
             return modelAndView;
 
         } else {
-            ModelAndView modelAndView = new ModelAndView("/error.404");
-            return modelAndView;
+
+            return new ModelAndView("/error.404");
         }
     }
 
-    @PostMapping("/delete-customer")
+    @PostMapping("/delete")
     public String deleteCustomer(@ModelAttribute("customer") Customer customer) {
-        hibernateCustomerService.remove(customer.getId());
-        return "redirect:/customers";
+        customerService.delete(customer);
+        return "redirect:customers";
+    }
+//    @PostMapping("/delete")
+//    public String doDelete(@ModelAttribute Customer customer) {
+////        hibernateCustomerService.save(customer);
+//
+//        customerService.save(customer);
+//
+//        return "redirect:/customers";
+//
+//    }
+
+    @GetMapping("/view/{id}")
+    public String view(@PathVariable long id, Model model) {
+        model.addAttribute("customer", customerService.findById(id));
+        return "/view";
     }
 }

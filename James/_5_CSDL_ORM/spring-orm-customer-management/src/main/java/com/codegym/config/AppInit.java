@@ -21,13 +21,5 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
     protected String[] getServletMappings() {
         return new String[]{"/"};
     }
-//    @Override
-//    protected javax.servlet.Filter[] getServletFilters(){
-//        CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
-//        characterEncodingFilter.setEncoding("UTF-8");
-//        characterEncodingFilter.setForceEncoding(true);
-//
-//        HiddenHttpMethodFilter httpMethodFilter = new HiddenHttpMethodFilter();
-//        return (javax.servlet.Filter[]) new Filter[]{(Filter) characterEncodingFilter, (Filter) httpMethodFilter};
-//    }
+
 }

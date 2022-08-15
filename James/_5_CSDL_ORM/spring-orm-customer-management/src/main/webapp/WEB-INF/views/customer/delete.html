@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Delete customer</title>
-    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
-<h1 style="text-align: center">Delete Customer</h1>
-
+<h1>Delete customer</h1>
+<h2>Are you sure?</h2>
+<p>
+    <a href="/customers">Customer list</a>
+</p>
 
 <div class="container">
     <div class="row">
         <div class="col-sm-12"></div>
-        <form  method="post" th:object="${customer}">
+        <form  th:object="${customer}" method="post">
             <input th:type="hidden" name="id" th:field="*{id}">
+            <h1 style="text-align: center">Customer Information</h1>
             <div class="mb-3">
                 <label class="form-label">NAME</label>
                 <input type="text" style="font-size: 25px" class="form-control" th:field="*{fullName}"
@@ -34,14 +37,11 @@
                 <input type="text" style="font-size: 25px" class="form-control" th:field="*{address}"
                        placeholder="input address">
             </div>
-            <div class="col-sm-4">
-                <button class="btn btn-danger" type="submit" value="Delete customer">Delete Customer</button>
-                <div class="btn-group">
-                    <a href="/customers" class="btn btn-primary">
-                        <i class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></i> Back to customer list
-                    </a>
-                </div>
-            </div>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Delete customer"></td>
+            </tr>
+            </table>
         </form>
     </div>
 </div>
