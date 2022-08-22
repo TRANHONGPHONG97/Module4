@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/sweetalert/v2/sweetalert2.min.css">
+    <link rel="stylesheet" href="assets/iziToast/iziToast-1.4.0.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <div class="row">
+                <div class="col-sm-5">
+                    <h1>List of customers</h1>
+                </div>
+                <div class="col-sm-7">
+                    <a class="btn btn-outline-light create-modal"><i class="fa fa-plus-square-o"></i>
+                        <span id="btnAddnew">Add New Customer</span></a>
+                    <a href="/transfers" class="btn btn-outline-light"><i class="fa fa-history"></i> <span>Transfer history</span></a>
+                </div>
+            </div>
+        </header>
+        <div class="box-body">
+
+            <input type="hidden" id="currentRow"/>
+
+            <table id="tbListCustomers" class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>FullName</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Balance</th>
+                        <th>Province</th>
+                        <th>District</th>
+                        <th>Ward</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+        <!-- <div class="footer"><button type="button" class="btn btn-secondary edit" title="Edit" data-toggle="tooltip">
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            Update
+        </button>
+        <button type="button" class="btn btn-success deposit" title="Deposit" data-toggle="tooltip">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            Deposit
+        </button>
+        <button type="button" class="btn btn-warning withdraw" title="Withdraw" data-toggle="tooltip">
+            <i class="fa fa-minus" aria-hidden="true"></i>
+            Withdraw
+        </button>
+        <button type="button" class="btn btn-primary transfer" title="Transfer" data-toggle="tooltip">
+            <i class="fa fa-exchange" aria-hidden="true"></i>
+            Transfer
+        </button>
+        <button type="button" class="btn btn-danger suspended" title="Suspended" data-toggle="tooltip">
+            <i class="fa fa-ban" aria-hidden="true"></i>
+            Suspended
+        </button></div> -->
+        <div id="showButton" class="hideButton">
+            <button id="btnUpdate" data-id="" class="btn btn-outline-primary">Update</button>
+            <button id="btnDoactive" data-id="" class="btn btn-outline-danger">Doactive</button>
+            <button id="btnDeposit" data-id="" class="btn btn-outline-warning">Deposit</button>
+            <button id="btnWithdraw" data-id="" class="btn btn-outline-success">Withdraw</button>
+            <button id="btnTransfer" data-id="" class="btn btn-outline-light">Transfer</button>
+            <button id="btnClose" data-id="" class="btn btn-outline-light">Close</button>
+        </div>
+    </div>
+    <div id="modalCreateCustomer" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Customer information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-alert-danger hide"></div>
+                    <form id="frmCreateCustomer">
+                        <fieldset class="row g-3">
+                            <div class="col-md-4">
+                                <label class="form-label">Full name</label>
+                                <input type="text" class="form-control" id="fullNameCre" name="fullNameCre">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Email</label>
+                                <input type="text" class="form-control" id="emailCre" name="emailCre">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="phoneCre" name="phoneCre">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Province</label>
+                                <select class="form-select" id="provinceCre" name="provinceCre"></select>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">District</label>
+                                <select class="form-select" id="districtCre" name="districtCre"></select>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Ward</label>
+                                <select class="form-select" id="wardCre" name="wardCre"></select>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Address</label>
+                                <input type="text" class="form-control" id="addressCre" name="addressCre">
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" id="btnCreateCustomer" class="btn btn-outline-secondary">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        Create customer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modalUpdateCustomer" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Customer information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-alert-danger hide"></div>
+                    <form id="frmUpdateCustomer">
+                        <fieldset class="row g-3">
+                            <div class="col-md-4">
+                                <label class="form-label">Full name</label>
+                                <input type="text" class="form-control" id="fullNameUp" name="fullNameUp">
+                                <input type="hidden" id="idCustomerUpdate">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Email</label>
+                                <input type="text" class="form-control" id="emailUp" name="emailUp">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="phoneUp" name="phoneUp">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Province</label>
+                                <select class="form-select" id="provinceUp" name="provinceUp"></select>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">District</label>
+                                <select class="form-select" id="districtUp" name="districtUp"></select>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Ward</label>
+                                <select class="form-select" id="wardUp" name="wardUp"></select>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Address</label>
+                                <input type="text" class="form-control" id="addressUp" name="addressUp">
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" id="btnUpdateCustomer" class="btn btn-outline-secondary">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        Update Customer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modalDeposit" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Customer information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-alert-danger hide"></div>
+                    <form id="frmDeposit">
+                        <fieldset class="row g-3">
+                            <div class="col-md-4">
+                                <label class="form-label">Full name</label>
+                                <input type="text" class="form-control" id="fullNameDep" name="fullNameDep" readonly>
+                                <input type="hidden" id="idCustomerDep">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Email</label>
+                                <input type="text" class="form-control" id="emailDep" name="emailDep" readonly>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="phoneDep" name="phoneDep" readonly>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Province</label>
+                                <input class="form-control" id="provinceDep" name="provinceDep" readonly></input>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">District</label>
+                                <input class="form-control" id="districtDep" name="districtDep" readonly></input>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Ward</label>
+                                <input class="form-control" id="wardDep" name="wardDep" readonly></input>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Address</label>
+                                <input type="text" class="form-control" id="addressDep" name="addressDep" readonly>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Balance</label>
+                                <input type="text" class="form-control" id="balanceDep" name="balanceDep" readonly>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Transaction Amount</label>
+                                <input type="text" class="form-control" id="transactionAmountDep" name="transactionAmountDep">
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" id="btnDepositCustomer" class="btn btn-outline-secondary">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        Deposit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modalWithdraw" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Customer information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-alert-danger hide"></div>
+                    <form id="frmWithdraw">
+                        <fieldset class="row g-3">
+                            <div class="col-md-4">
+                                <label class="form-label">Full name</label>
+                                <input type="text" class="form-control" id="fullNameWi" name="fullNameWi" readonly>
+                                <input type="hidden" id="idCustomerWi">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Email</label>
+                                <input type="text" class="form-control" id="emailWi" name="emailWi" readonly>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="phoneWi" name="phoneWi" readonly>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Province</label>
+                                <input class="form-control" id="provinceWi" name="provinceWi" readonly></input>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">District</label>
+                                <input class="form-control" id="districtWi" name="districtWi" readonly></input>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Ward</label>
+                                <input class="form-control" id="wardWi" name="wardWi" readonly></input>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Address</label>
+                                <input type="text" class="form-control" id="addressWi" name="addressWi" readonly>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Balance</label>
+                                <input type="text" class="form-control" id="balanceWi" name="balanceWi" readonly>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Transaction Amount</label>
+                                <input type="text" class="form-control" id="transactionAmountWi" name="transactionAmountWi">
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" id="btnWithdrawCustomer" class="btn btn-outline-secondary">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        Withdraw
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modalTransfer" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Transfer money Information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-alert-danger hide"></div>
+                    <form id="frmTransfer">
+                        <fieldset class="mt-3 g-3">
+                            <div class="form-group row">
+                                <div class="mb-3 col-md-4">
+                                    <label class="col-sm-12 col-form-label">Sender ID</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="senderIdTra" name="senderIdTra" readonly>
+                                    </div>
+                                </div>
+                                <div class="mb-3 col-md-4">
+                                    <label class="col-sm-12 col-form-label">Sender Name</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="senderNameTra" name="senderNameTra" readonly>
+                                    </div>
+                                </div>
+                                <div class="mb-3 col-md-4">
+                                    <label class="col-sm-12 col-form-label">Email</label>
+                                    <div class="col-sm-12">
+                                        <input type="email" class="form-control" id="emailTra" name="emailTra" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="mb-3 col-md-6">
+                                    <label class="col-sm-12 col-form-label">Sender balance</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control num-space" id="balanceTra" name="balanceTra" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 col-md-6">
+                                    <label class="col-sm-12 col-form-label">Recipient Name</label>
+                                    <div class="col-sm-12">
+                                        <select class="form-select" id="recipientIdTra" name="recipientIdTra"></select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="mb-3 col-md-4">
+                                    <label class="col-sm-12 col-form-label">Transfer Amount ($)</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control num-space" id="transferAmountTra" name="transferAmountTra">
+                                    </div>
+                                </div>
+                                <div class="mb-3 col-md-4">
+                                    <label class="col-sm-12 col-form-label">Fees (%)</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control num-space" id="feesTra" name="feesTra" value="10" readonly>
+                                    </div>
+                                </div>
+                                <div class="mb-3 col-md-4">
+                                    <label class="col-sm-12 col-form-label">Total amount of transaction ($)</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control num-dot" id="transactionAmountTra" name="transactionAmountTra" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" id="btnTransferCustomer" class="btn btn-outline-primary">
+                        <i class="fa fa-exchange" aria-hidden="true"></i>
+                        Transfer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/jquery.validate.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/sweetalert/v2/sweetalert2.min.js"></script>
+    <script src="assets/iziToast/iziToast-1.4.0.js"></script>
+    <script src="/assets/js/app.js"></script>
+
+    <script>
+        let locationRegion = new LocationRegion()
+        let listLocationRegion = [];
+
+        let customer = new Customer();
+
+        let sender = new Sender();
+
+        let recipient = new Recipient();
+
+        let deposit = new Deposit();
+
+        let withdraw = new Withdraw();
+
+        let transfer = new Transfer();
+
+        // Hàm vẽ danh sách khách hàng
+        function loadCustomers() {
+            $.ajax({
+                "type": "GET",
+                "url": "http://localhost:3030/customers?deleted=0"
+            })
+            .done((data) => {
+                $.each(data, (i, item) => {
+                    customer = item;
+                    locationRegion = customer.locationRegion;
+
+                    let str = `
+                        <tr id = "tr_${customer.id}" data-id="${customer.id}">
+                            <td>${customer.id}</td>
+                            <td>${customer.fullName}</td>
+                            <td>${customer.email}</td>
+                            <td>${customer.phone}</td>
+                            <td>${customer.balance}</td>
+                            <td>${locationRegion.provinceName}</td>
+                            <td>${locationRegion.districtName}</td>
+                            <td>${locationRegion.wardName}</td>
+                            <td>${locationRegion.address}</td>
+                        </tr>
+                    `;
+
+                    $('#tbListCustomers tbody').prepend(str);
+                });
+
+                handleClickRow();
+            });
+        }
+
+        loadCustomers();
+
+        // Hàm lấy tất cả các tỉnh / tp
+        function getAllProvince() {
+            let listProvince = [];
+            
+            $.ajax({
+                "async" : false,
+                "type": "GET",
+                "url": "https://vapi.vnappmob.com/api/province/"
+            })
+            .done((data) => {
+                listProvince = data;
+            });
+
+            return listProvince;
+        }
+
+        // Hàm lấy huyện theo id của tỉnh
+        function getAllDistrictByProvinceId(provinceId) {
+            let listDistrict = [];
+            
+            $.ajax({
+                "async" : false,
+                "type": "GET",
+                "url": "https://vapi.vnappmob.com/api/province/district/" + provinceId
+            })
+            .done((data) => {
+                listDistrict = data;
+            });
+
+            return listDistrict;
+        }
+
+        // Hàm lấy xã theo id của huyện
+        function getAllWardByDistrictId(districtId){
+            let listWard = [];
+            
+            $.ajax({
+                "async" : false,
+                "type": "GET",
+                "url": "https://vapi.vnappmob.com/api/province/ward/" + districtId
+            })
+            .done((data) => {
+                listWard = data;
+            });
+
+            return listWard;
+        }
+
+        // Hàm hiển thị modal 
+        function handleGroupShowModal() {
+            handleShowCreateModal();
+        }
+        handleGroupShowModal()
+
+        // Hàm hiển thị modal tạo mới khách hàng
+        function handleShowCreateModal() {
+            $('#btnAddnew').on("click",function(){
+                let listProvinceData = getAllProvince();
+                let strDis = "";
+                let provinceIdFirst = (listProvinceData.results)[0].province_id;
+                let listDistrictData = getAllDistrictByProvinceId(provinceIdFirst);
+                $.each(listDistrictData.results, (i, item) => {
+                    strDis += `<option value="${item.district_id}">${item.district_name}</option>`;
+                })
+                let strWa = "";
+                let districtIdFirst = (listDistrictData.results)[0].district_id;
+                let listWardData = getAllWardByDistrictId(districtIdFirst);
+                $.each(listWardData.results, (i, item) => {
+                    strWa += `<option value = "${item.ward_id}">${item.ward_name}</option>`;
+                })
+                // $('#provinceCre').prepend(strPro);
+                $('#districtCre').prepend(strDis);
+                $('#wardCre').prepend(strWa);
+                $('#modalCreateCustomer').modal('show');
+            })
+        }
+
+        // Hàm xóa tất cả dữ liệu trong input sau khi tạo mới khách hàng
+        function clearInput() {
+            $('#fullNameCre').val("");
+            $('#emailCre').val("");
+            $('#phoneCre').val("");
+            $('#addressCre').val("");
+        }
+
+        // Hàm hiển thị confirm xóa
+        function handleConfirmDelete(rowId) {
+            $('#btnDoactive').on('click', function () {
+
+                let customerId = rowId;
+
+                App.SweetAlert.showConfirmDelete()
+                .then((result) => {
+                    if (result.isConfirmed) {
+                        getCustomerById(customerId).then(() => {
+                            doDeactive(customerId);
+                        })
+                    }
+                })
+            })
+        }
+
+        // Hàm xóa khách hàng
+        function doDeactive(customerId) {
+            customer.deleted = 1;
+            $.ajax({
+                "headers": {
+                    "accepts": "application/json",
+                    "content-type": "application/json"
+                },
+                "type": "PUT",
+                "url": "http://localhost:3030/customers/" + customerId,
+                "data": JSON.stringify(customer)
+            })
+            .done((data) => {
+                $('#tr_' + customerId).remove();
+                App.SweetAlert.showAlertSuccess('Xóa Khách Hàng Thành Công');
+                $("#showButton").removeClass("showButton").addClass("hideButton");
+            })
+            .fail((error) => {
+                App.SweetAlert.showAlertError('Xóa Thất Bại');
+            });
+        }
+
+        // Hàm vẽ tỉnh / tp khi hiển thị hộp thoại tạo mới
+        function drawProvincesCrea() {
+            return $.ajax({
+                "async" : false,
+                "type": "GET",
+                "url": "https://vapi.vnappmob.com/api/province/"
+            })
+            .done((data) => {
+                $.each(data.results, (i, item) => {
+                    let str = `<option value="${item.province_id}">${item.province_name}</option>`;
+                    $("#provinceCre").prepend(str);
+                })
+            });
+        }
+
+        // Hàm vẽ danh sách chuyển khoản khi hiển thị hộp thoại transfer
+        function drawRecipient(idSender) {
+            return $.ajax({
+                "async" : false,
+                "type": "GET",
+                "url": "http://localhost:3030/customers/"
+            })
+            .done((data) => {
+                $("#recipientIdTra").html("");
+                $.each(data, (i, item) => {
+                    if(item.id != idSender){
+                        let str = `<option value="${item.id}">(${item.id}) ${item.fullName}</option>`;
+                        $("#recipientIdTra").prepend(str);
+                    }
+                })
+            });
+        }
+
+        drawProvincesCrea();
+        // Hàm vẽ tỉnh / tp khi hiển thị hộp thoại update
+        function drawProvincesUp() {
+            return $.ajax({
+                "async" : false,
+                "type": "GET",
+                "url": "https://vapi.vnappmob.com/api/province/"
+            })
+            .done((data) => {
+                $.each(data.results, (i, item) => {
+                    let str = `<option value="${item.province_id}">${item.province_name}</option>`;
+                    $("#provinceUp").prepend(str);
+                })
+            });
+        }
+
+        // Hàm vẽ huyện khi hiển thị hộp thoại update
+        function drawDistrictsUp(provinceId) {
+            return $.ajax({
+                "async" : false,
+                "type": "GET",
+                "url": "https://vapi.vnappmob.com/api/province/district/" + provinceId
+            })
+            .done((data) => {
+                $("#districtUp").html("");
+                $.each(data.results, (i, item) => {
+                    let str = `<option value="${item.district_id}">${item.district_name}</option>`;
+                    $("#districtUp").prepend(str);
+                })
+            });
+        }
+
+        // Hàm vẽ xã khi hiển thị hộp thoại update
+        function drawWardsUp(districtId) {
+            return $.ajax({
+                "async" : false,
+                "type": "GET",
+                "url": "https://vapi.vnappmob.com/api/province/ward/" + districtId
+            })
+            .done((data) => {
+                $("#wardUp").html("");
+                $.each(data.results, (i, item) => {
+                    let str = `<option value="${item.ward_id}">${item.ward_name}</option>`;
+                    $("#wardUp").prepend(str);
+                })
+            });
+        }
+
+
+        drawProvincesUp();
+
+        // Hàm hiển thị modal update
+        function handleShowUpdateModal(rowId) {
+            $("#showButton").removeClass("hideButton").addClass("showButton");
+
+            $('#btnUpdate').on('click',function(){
+                $.ajax({
+                    "async" : false,
+                    "type": "GET",
+                    "url": "http://localhost:3002/customers/" + rowId
+                })
+                .done((data) => {
+                    customer = data;
+                    locationRegion = customer.locationRegion;
+                    $('#fullNameUp').val(customer.fullName);
+                    $('#emailUp').val(customer.email);
+                    $('#phoneUp').val(customer.phone);
+                    $('#addressUp').val(locationRegion.address);
+                    $('#idCustomerUpdate').val(rowId);
+                    $("#provinceUp").val(customer.locationRegion.provinceId);
+
+                    drawDistrictsUp(customer.locationRegion.provinceId).then(() => {
+                        $("#districtUp").val(customer.locationRegion.districtId);
+                        drawWardsUp(customer.locationRegion.districtId).then(() => {
+                            $("#wardUp").val(customer.locationRegion.wardId);
+                        });
+                    });
+                
+                    $('#modalUpdateCustomer').modal('show');
+                })
+                .fail((error) => {
+                    App.SweetAlert.showAlertError('Người Dùng Không Tồn Tại');
+                })
+            })
+        }
+
+        // Hàm hiển thị modal deposit
+        function handleShowDepositModal(rowId){
+            $("#showButton").removeClass("hideButton").addClass("showButton");
+
+            $('#btnDeposit').on('click',function(){
+                $.ajax({
+                    "async" : false,
+                    "type": "GET",
+                    "url": "http://localhost:3002/customers/" + rowId
+                })
+                .done((data) => {
+                    customer = data;
+                    locationRegion = customer.locationRegion;
+                    $('#fullNameDep').val(customer.fullName);
+                    $('#emailDep').val(customer.email);
+                    $('#phoneDep').val(customer.phone);
+                    $('#addressDep').val(locationRegion.address);
+                    $('#idCustomerDep').val(rowId);
+                    $('#balanceDep').val(customer.balance)
+                    $("#provinceDep").val(customer.locationRegion.provinceName);
+                    $("#districtDep").val(customer.locationRegion.districtName);
+                    $("#wardDep").val(customer.locationRegion.wardName);
+                    $('#modalDeposit').modal('show');
+                })
+                .fail((error) => {
+                    App.SweetAlert.showAlertError('Người Dùng Không Tồn Tại');
+                })
+            })
+        }
+        
+        // Hàm hiển thị modal withdraw
+        function handleShowWithdrawModal(rowId){
+            $("#showButton").removeClass("hideButton").addClass("showButton");
+
+            $('#btnWithdraw').on('click',function(){
+                $.ajax({
+                    "async" : false,
+                    "type": "GET",
+                    "url": "http://localhost:3002/customers/" + rowId
+                })
+                .done((data) => {
+                    customer = data;
+                    locationRegion = customer.locationRegion;
+                    $('#fullNameWi').val(customer.fullName);
+                    $('#emailWi').val(customer.email);
+                    $('#phoneWi').val(customer.phone);
+                    $('#addressWi').val(locationRegion.address);
+                    $('#idCustomerWi').val(rowId);
+                    $('#balanceWi').val(customer.balance)
+                    $("#provinceWi").val(customer.locationRegion.provinceName);
+                    $("#districtWi").val(customer.locationRegion.districtName);
+                    $("#wardWi").val(customer.locationRegion.wardName);
+                    $('#modalWithdraw').modal('show');
+                })
+                .fail((error) => {
+                    App.SweetAlert.showAlertError('Người Dùng Không Tồn Tại');
+                })
+            })
+        }
+        
+        // Hàm hiển thị modal transfer
+        function handleShowTransferModal(rowId){
+            $("#showButton").removeClass("hideButton").addClass("showButton");
+
+            $('#btnTransfer').on('click',function(){
+                getCustomerById(rowId).then(() => {
+                    $('#senderIdTra').val(customer.id);
+                    $('#senderNameTra').val(customer.fullName);
+                    $('#emailTra').val(customer.email);
+                    $('#balanceTra').val(customer.balance);
+                    drawRecipient(rowId);
+                    $('#modalTransfer').modal('show');
+                })
+            })
+        }
+
+        // Hàm xử lý sự kiện click vào các tr
+        function handleClickRow() {
+            $('#tbListCustomers tbody tr').on('click',function(){
+                let rowId = $(this).data('id');
+                $('#tbListCustomers tbody tr').removeClass("red");
+                $(this).addClass("red");
+                handleShowUpdateModal(rowId);
+                handleConfirmDelete(rowId);
+                handleShowDepositModal(rowId);
+                handleShowWithdrawModal(rowId);
+                handleShowTransferModal(rowId);
+            })
+        }
+        
+        // Sự kiện đóng danh sách các nút
+        $('#btnClose').on('click',function(){
+            $("#showButton").removeClass("showButton").addClass("hideButton");
+        })
+
+        // Hàm xử lý sự kiện thay đổi tỉnh / tp
+        function districtChange(provinceIdChange){
+            let listProvinceChange = getAllDistrictByProvinceId(provinceIdChange);
+            let strChange = "";
+            $.each(listProvinceChange.results, (i, item) => {
+                strChange += `<option value="${item.district_id}">${item.district_name}</option>`;
+            })
+            $('#districtCre').empty();
+            $('#districtCre').prepend(strChange);
+            let districtIdChange = (listProvinceChange.results)[0].district_id;
+            wardChange(districtIdChange);   
+        }
+
+        // Hàm xử lý sự kiện thay đổi tỉnh / tp khi update
+        function districtChangeUp(provinceIdChange){
+            let listProvinceChange = getAllDistrictByProvinceId(provinceIdChange);
+            let strChange = "";
+            $.each(listProvinceChange.results, (i, item) => {
+                strChange += `<option value="${item.district_id}">${item.district_name}</option>`;
+            })
+            $('#districtUp').empty();
+            $('#districtUp').prepend(strChange);
+            let districtIdChange = (listProvinceChange.results)[0].district_id;
+            wardChangeUp(districtIdChange);
+        }
+
+        // Hàm xử lý sự kiện thay đổi xã khi huyện thay đổi
+        function wardChange(districtIdChange){
+            let listDistrictChange = getAllWardByDistrictId(districtIdChange);
+            let strChange = "";
+            $.each(listDistrictChange.results, (i, item) => {
+                strChange += `<option value = "${item.ward_id}">${item.ward_name}</option>`;
+            })
+            $('#wardCre').empty();
+            $('#wardCre').prepend(strChange);
+        }
+
+        // Hàm xử lý sự kiện thay đổi xã khi huyện thay đổi khi update
+        function wardChangeUp(districtIdChange){
+            let listDistrictChange = getAllWardByDistrictId(districtIdChange);
+            let strChange = "";
+            $.each(listDistrictChange.results, (i, item) => {
+                strChange += `<option value = "${item.ward_id}">${item.ward_name}</option>`;
+            })
+            $('#wardUp').empty();
+            $('#wardUp').prepend(strChange);
+        }
+
+        // Sự kiện thay đổi tỉnh khi tạo mới
+        $('#provinceCre').on('change',function(){
+            let provinceIdChange = $('#provinceCre').val();
+            districtChange(provinceIdChange);
+        })
+
+        // Sự kiện thay đổi tỉnh khi update
+        $('#provinceUp').on('change',function(){
+            let provinceIdChange = $('#provinceUp').val();
+            districtChangeUp(provinceIdChange);
+        })
+
+        // Sự kiện thay đổi huyện
+        $('#districtCre').on('change',function(){
+            let districtIdChange = $('#districtCre').val();
+            wardChange(districtIdChange);
+        })
+
+        // Sự kiện thay đổi huyện khi update
+        $('#districtUp').on('change',function(){
+            let districtIdChange = $('#districtUp').val();
+            wardChangeUp(districtIdChange);
+        })
+
+        // Sự kiện nhấn vào nút tạo mới khách hàng
+        $('#btnCreateCustomer').on('click',function(){
+            $('#frmCreateCustomer').submit();
+        })
+
+        // Hàm lấy về thông tin khách hàng theo id
+        function getCustomerById(customerId) {
+            return $.ajax({
+                "type": "GET",
+                "url": "http://localhost:3030/customers/" + customerId
+            })
+            .done((data) => {
+                customer = data;
+            })
+            .fail((error) => {
+                App.SweetAlert.showAlertError('Khách Hàng Không Tồn Tại');
+            }) 
+        }
+
+        // Sự kiện nhấn nút update
+        $('#btnUpdateCustomer').on('click',function(){
+            $('#frmUpdateCustomer').submit();
+        })
+
+        // Sự kiện nhấn nút deposit
+        $('#btnDepositCustomer').on('click',function(){
+            $('#frmDeposit').submit();
+        })
+
+        // Sự kiện nhấn nút withdraw
+        $('#btnWithdrawCustomer').on('click',function(){
+            $('#frmWithdraw').submit();
+        })
+    
+        // Sự kiện thay đổi tổng tiền chuyển khoản
+        $('#transferAmountTra').on('input',function(){
+            let transactionAmount = $('#transferAmountTra').val();
+            let totalTransactionAmount = Number(transactionAmount) + Number(transactionAmount)*0.1;
+            $('#transactionAmountTra').val(totalTransactionAmount);
+        })
+        
+        // Sự kiện nhấn nút transfer
+        $('#btnTransferCustomer').on('click',function(){
+            $('#frmTransfer').submit();
+        })
+        
+        function doCreate() {
+            let fullName = $('#fullNameCre').val();
+            let email = $('#emailCre').val();
+            let phone = $('#phoneCre').val();
+            let province = $('#provinceCre').val();
+            let district = $('#districtCre').val();
+            let ward = $('#wardCre').val();
+            let address = $('#addressCre').val();
+            let provinceName = $('#provinceCre :selected').text();
+            let districtName = $('#districtCre :selected').text();
+            let wardName = $('#wardCre :selected').text();
+            
+            let str = `Full Name : ${fullName} Email : ${email} Phone : ${phone} Provice : ${province} District : ${district} Ward : ${ward} Address : ${address}`;
+            let listProvince = getAllProvince();
+            let flag = false;
+            $.each(listProvince.results, (i, item) => {
+                if(province == item.province_id) {
+                    flag = true;
+                    return false;
+                }
+            })
+            if(flag) {
+                flag = false;
+                let listDistrict = getAllDistrictByProvinceId(province);
+                $.each(listDistrict.results, (i, item) => {
+                    if(district == item.district_id) {
+                        flag = true;
+                        return false;
+                    }
+                })
+                if(flag){
+                    flag = false;
+                    let listWard = getAllWardByDistrictId(district);
+                    $.each(listWard.results, (i, item) => {
+                        if(ward == item.ward_id) {
+                            flag = true;
+                            return false;
+                        }
+                    })
+                    if(flag) {
+                        locationRegion.address = address;
+                        locationRegion.provinceId = province;
+                        locationRegion.provinceName = provinceName;
+                        locationRegion.districtId = district;
+                        locationRegion.districtName = districtName;
+                        locationRegion.wardId = ward;
+                        locationRegion.wardName = wardName;
+                       
+                        delete customer.id;
+                        customer.fullName = fullName;
+                        customer.email = email;
+                        customer.phone = phone;
+                        customer.locationRegion = locationRegion;
+                        customer.balance = 0
+                      
+                        $.ajax({
+                            "headers": {
+                                "accepts": "application/json",
+                                "content-type": "application/json"
+                            },
+                            "type": "POST",
+                            "url": "http://localhost:3030/customers",
+                            "data": JSON.stringify(customer)
+                        })
+                        .done((item) => {
+                            
+                            customer = item;
+                            locationRegion = customer.locationRegion;
+
+                            let str = `
+                                <tr id = "tr_${customer.id}" data-id="${customer.id}">
+                                    <td>${customer.id}</td>
+                                    <td>${customer.fullName}</td>
+                                    <td>${customer.email}</td>
+                                    <td>${customer.phone}</td>
+                                    <td>${customer.balance}</td>
+                                    <td>${locationRegion.provinceName}</td>
+                                    <td>${locationRegion.districtName}</td>
+                                    <td>${locationRegion.wardName}</td>
+                                    <td>${locationRegion.address}</td>
+                                </tr>
+                            `;
+
+                            $('#tbListCustomers tbody').prepend(str);
+                            $('#modalCreateCustomer').modal('hide');
+                            clearInput();
+                            App.SweetAlert.showAlertSuccess('Tạo Mới khách Hàng Thành Công');
+                            handleClickRow();
+                        })
+                        .fail((error) => {
+                            App.SweetAlert.showAlertError('Tạo Mới Thất Bại');
+                        })
+                    }else {
+                        App.SweetAlert.showAlertError('Xã / Thị Trấn Không Tồn Tại');
+                    }
+                }else{
+                    App.SweetAlert.showAlertError('Phường / Huyện Không Tồn Tại');
+                }
+            }else{
+                App.SweetAlert.showAlertError('Thành Phố / Tỉnh Không Tồn Tại');
+            }
+        }
+
+        function doUpdate() {
+            let fullName = $('#fullNameUp').val();
+            let email = $('#emailUp').val();
+            let phone = $('#phoneUp').val();
+            let province = $('#provinceUp').val();
+            let district = $('#districtUp').val();
+            let ward = $('#wardUp').val();
+            let address = $('#addressUp').val();
+            let provinceName = $('#provinceUp :selected').text();
+            let districtName = $('#districtUp :selected').text();
+            let wardName = $('#wardUp :selected').text();
+            let customerId = $('#idCustomerUpdate').val();
+            
+            let str = `Full Name : ${fullName} Email : ${email} Phone : ${phone} Provice : ${province} District : ${district} Ward : ${ward} Address : ${address}`;
+            
+            let listProvince = getAllProvince();
+            let flag = false;
+            $.each(listProvince.results, (i, item) => {
+                if(province == item.province_id) {
+                    flag = true;
+                    return false;
+                }
+            })
+            if(flag) {
+                flag = false;
+                let listDistrict = getAllDistrictByProvinceId(province);
+                $.each(listDistrict.results, (i, item) => {
+                    if(district == item.district_id) {
+                        flag = true;
+                        return false;
+                    }
+                })
+                if(flag){
+                    flag = false;
+                    let listWard = getAllWardByDistrictId(district);
+                    $.each(listWard.results, (i, item) => {
+                        if(ward == item.ward_id) {
+                            flag = true;
+                            return false;
+                        }
+                    })
+                    if(flag) {
+
+                        getCustomerById(customerId).then(() => {
+                            locationRegion.address = address;
+                            locationRegion.provinceId = province;
+                            locationRegion.provinceName = provinceName;
+                            locationRegion.districtId = district;
+                            locationRegion.districtName = districtName;
+                            locationRegion.wardId = ward;
+                            locationRegion.wardName = wardName;
+                            
+
+                            customer.fullName = fullName;
+                            customer.email = email;
+                            customer.phone = phone;
+                            customer.locationRegion = locationRegion;
+
+                            $.ajax({
+                                "headers": {
+                                    "accepts": "application/json",
+                                    "content-type": "application/json"
+                                },
+                                "type": "PUT",
+                                "url": "http://localhost:3002/customers/" + customer.id,
+                                "data": JSON.stringify(customer)
+                            })
+                            .done((item) => {
+                                
+                                customer = item;
+                                locationRegion = customer.locationRegion;
+
+                                let currentRow = $('#tr_' + customer.id);
+
+                                let updateRow = ` <tr id = "tr_${customer.id}" data-id="${customer.id}">
+                                                        <td>${customer.id}</td>
+                                                        <td>${customer.fullName}</td>
+                                                        <td>${customer.email}</td>
+                                                        <td>${customer.phone}</td>
+                                                        <td>${customer.balance}</td>
+                                                        <td>${locationRegion.provinceName}</td>
+                                                        <td>${locationRegion.districtName}</td>
+                                                        <td>${locationRegion.wardName}</td>
+                                                        <td>${locationRegion.address}</td>
+                                                    </tr>`;
+                                currentRow.replaceWith(updateRow);        
+                                App.SweetAlert.showAlertSuccess('Cập Nhập Thông Tin Khách Hàng Thành Công');
+                                $("#showButton").removeClass("showButton").addClass("hideButton");
+                                $('#modalUpdateCustomer').modal('hide');
+                                handleClickRow();
+                            })
+                            .fail((error) => {
+                                App.SweetAlert.showAlertError('Cập Nhật Thất Bại');
+                            })
+                        })
+                    }else {
+                        App.SweetAlert.showAlertError('Xã / Thị Trấn Không Tồn Tại');
+                    }
+                }else{
+                    App.SweetAlert.showAlertError('Phường / Huyện Không Tồn Tại');
+                }
+            }else{
+                App.SweetAlert.showAlertError('Thành Phố / Tỉnh Không Tồn Tại');
+            }
+        }
+
+        function doDeposit() {
+            let fullName = $('#fullNameDep').val();
+            let email = $('#emailDep').val();
+            let phone = $('#phoneDep').val();
+            let province = $('#provinceDep').val();
+            let district = $('#districtDep').val();
+            let ward = $('#wardDep').val();
+            let address = $('#addressDep').val();
+            let provinceName = $('#provinceDep').val();
+            let districtName = $('#districtDep').val();
+            let wardName = $('#wardDep').val();
+            let customerId = $('#idCustomerDep').val();
+            let balance = $('#balanceDep').val()
+            let transactionAmount = $('#transactionAmountDep').val()
+            let str = `Id : ${customerId} Full Name : ${fullName} Email : ${email} Phone : ${phone} Provice : ${province} District : ${district} Ward : ${ward} Address : ${address} Balance : ${balance} TransactionAmount : ${transactionAmount}`;
+            
+            getCustomerById(customerId).then(() => {
+                customer.balance = Number(transactionAmount) + Number(customer.balance);
+                $.ajax({
+                    "headers": {
+                        "accepts": "application/json",
+                        "content-type": "application/json"
+                    },
+                    "type": "PUT",
+                    "url": "http://localhost:3002/customers/" + customer.id,
+                    "data": JSON.stringify(customer)
+                })
+                .done((item) => {
+                    
+                    customer = item;
+                    locationRegion = customer.locationRegion;
+                    delete deposit.id;
+                    deposit.customerId = customer.id;
+                    deposit.transactionAmount = transactionAmount;
+                    deposit.createdAt = new Date();
+
+                    $.ajax({
+                        "headers": {
+                            "accepts": "application/json",
+                            "content-type": "application/json"
+                        },
+                        "type": "POST",
+                        "url": "http://localhost:3002/deposits/",
+                        "data": JSON.stringify(deposit)
+                    })
+                    .done((data) => {
+                        let currentRow = $('#tr_' + customer.id);
+
+                        let updateRow = ` <tr id = "tr_${customer.id}" data-id="${customer.id}">
+                                                <td>${customer.id}</td>
+                                                <td>${customer.fullName}</td>
+                                                <td>${customer.email}</td>
+                                                <td>${customer.phone}</td>
+                                                <td>${customer.balance}</td>
+                                                <td>${locationRegion.provinceName}</td>
+                                                <td>${locationRegion.districtName}</td>
+                                                <td>${locationRegion.wardName}</td>
+                                                <td>${locationRegion.address}</td>
+                                            </tr>`;
+                        currentRow.replaceWith(updateRow);        
+                        App.SweetAlert.showAlertSuccess('Nạp Tiền Thành Công');
+                        $("#showButton").removeClass("showButton").addClass("hideButton");
+                        $('#modalDeposit').modal('hide');
+                        $('#transactionAmountDep').val("");
+                        customer.balance = 0;
+                        handleClickRow();
+                    })
+                    .fail((error) => {
+                        App.SweetAlert.showAlertError('Nạp Tiền Thất Bại');
+                    })
+                })
+                .fail((error) => {
+                    App.SweetAlert.showAlertError('Nạp Tiền Thất Bại');
+                })
+            })
+        }
+
+        function doWithdraw() {
+            let fullName = $('#fullNameWi').val();
+            let email = $('#emailWi').val();
+            let phone = $('#phoneWi').val();
+            let province = $('#provinceWi').val();
+            let district = $('#districtWi').val();
+            let ward = $('#wardWi').val();
+            let address = $('#addressWi').val();
+            let provinceName = $('#provinceWi').val();
+            let districtName = $('#districtWi').val();
+            let wardName = $('#wardWi').val();
+            let customerId = $('#idCustomerWi').val();
+            let balance = $('#balanceWi').val()
+            let transactionAmount = $('#transactionAmountWi').val()
+            let str = `Id : ${customerId} Full Name : ${fullName} Email : ${email} Phone : ${phone} Provice : ${province} District : ${district} Ward : ${ward} Address : ${address} Balance : ${balance} TransactionAmount : ${transactionAmount}`;
+            
+            getCustomerById(customerId).then(() => {
+                customer.balance = Number(customer.balance) - Number(transactionAmount);
+                if(customer.balance < 0) {
+                    App.SweetAlert.showAlertError('Tiền Rút Lớn Hơn Tài Khoản Hiện Có');
+                }else{
+
+                
+                    $.ajax({
+                        "headers": {
+                            "accepts": "application/json",
+                            "content-type": "application/json"
+                        },
+                        "type": "PUT",
+                        "url": "http://localhost:3002/customers/" + customer.id,
+                        "data": JSON.stringify(customer)
+                    })
+                    .done((item) => {
+                        
+                        customer = item;
+                        locationRegion = customer.locationRegion;
+                        delete withdraw.id;
+                        withdraw.customerId = customer.id;
+                        withdraw.transactionAmount = transactionAmount;
+                        withdraw.createdAt = new Date();
+                        
+                        $.ajax({
+                            "headers": {
+                                "accepts": "application/json",
+                                "content-type": "application/json"
+                            },
+                            "type": "POST",
+                            "url": "http://localhost:3002/withdraws/",
+                            "data": JSON.stringify(withdraw)
+                        })
+                        .done((data) => {
+                            let currentRow = $('#tr_' + customer.id);
+
+                            let updateRow = ` <tr id = "tr_${customer.id}" data-id="${customer.id}">
+                                                    <td>${customer.id}</td>
+                                                    <td>${customer.fullName}</td>
+                                                    <td>${customer.email}</td>
+                                                    <td>${customer.phone}</td>
+                                                    <td>${customer.balance}</td>
+                                                    <td>${locationRegion.provinceName}</td>
+                                                    <td>${locationRegion.districtName}</td>
+                                                    <td>${locationRegion.wardName}</td>
+                                                    <td>${locationRegion.address}</td>
+                                                </tr>`;
+                            currentRow.replaceWith(updateRow);        
+                            App.SweetAlert.showAlertSuccess('Rút Tiền Thành Công');
+                            $("#showButton").removeClass("showButton").addClass("hideButton");
+                            $('#modalWithdraw').modal('hide');
+                            $('#transactionAmountWi').val("");
+                            handleClickRow();
+                        })
+                        .fail((error) => {
+                            App.SweetAlert.showAlertError('Rút Tiền Thất Bại');
+                        })
+                    })
+                    .fail((error) => {
+                        App.SweetAlert.showAlertError('Rút Tiền Thất Bại');
+                    })
+                }
+            })
+        }
+
+        function doTransfer() {
+            let senderId = $('#senderIdTra').val();
+            let recipientId = $('#recipientIdTra :selected').val();
+            let transferAmount = $('#transferAmountTra').val();
+            let totalTransactionAmount = Number(transferAmount) + Number(transferAmount)*0.1;
+            let str = `SenderId : ${senderId} RecipientId : ${recipientId} TransferAmount : ${transferAmount}`;
+            getCustomerById(senderId).then(() =>{
+                sender = customer;
+                let senderBalance = sender.balance;
+                if(customer.balance < totalTransactionAmount) {
+                    App.SweetAlert.showAlertError('Tổng Tiền Chuyển Khoản Lớn Hơn Tài Khoản Hiện Có');
+                }else{
+                    if(senderId == recipientId) {
+                        App.SweetAlert.showAlertError('Người Chuyển Tiền Phải Khác Người Nhận Tiền');
+                    }else{
+                        getCustomerById(recipientId).then(() =>{
+                            recipient = customer;
+                            let recipientBalance = recipient.balance;
+                            customer = sender;
+                            
+                            customer.balance = sender.balance - totalTransactionAmount;
+                            $.ajax({
+                                "headers": {
+                                    "accepts": "application/json",
+                                    "content-type": "application/json"
+                                },
+                                "async":false,
+                                "type": "PUT",
+                                "url": "http://localhost:3002/customers/" + customer.id,
+                                "data": JSON.stringify(customer)
+                            })
+                            .done((item) => {
+                                let senderChange = item;
+                                App.IziToast.showAlertSuccess("Trừ Tiền Khách Hàng Chuyển Tiền Thành Công");
+                                customer = recipient;
+                                customer.balance = customer.balance + Number(transferAmount);
+                                $.ajax({
+                                    "headers": {
+                                        "async": "application/json",
+                                        "content-type": "application/json"
+                                    },
+                                    "accepts":false,
+                                    "type": "PUT",
+                                    "url": "http://localhost:3002/customers/" + customer.id,
+                                    "data": JSON.stringify(customer)
+                                })
+                                .done((item) => {
+                                    App.IziToast.showAlertSuccess("Cộng Tiền Khách Hàng Nhận Tiền Thành Công");
+                                    let recipientChange = customer;
+                                    delete transfer.id;
+                                    transfer.createdAt = new Date();
+                                    transfer.feesAmount = 0.1 * Number(transferAmount);
+                                    transfer.transactionAmount = Number(transferAmount) + 0.1 * Number(transferAmount);
+                                    transfer.transferAmount = Number(transferAmount);
+                                    transfer.recipientId = recipient.id;
+                                    transfer.senderId = sender.id;
+                                    $.ajax({
+                                        "headers": {
+                                            "accepts": "application/json",
+                                            "content-type": "application/json"
+                                        },
+                                        "type": "POST",
+                                        "url": "http://localhost:3003/transfers",
+                                        "data": JSON.stringify(transfer)
+                                    })
+                                    .done((item) => {
+
+                                        App.IziToast.showAlertSuccess("Chuyển Tiền Thành Công");
+                                        let strSen =`<tr id = "tr_${senderChange.id}" data-id="${senderChange.id}">
+                                                        <td>${senderChange.id}</td>
+                                                        <td>${senderChange.fullName}</td>
+                                                        <td>${senderChange.email}</td>
+                                                        <td>${senderChange.phone}</td>
+                                                        <td>${senderChange.balance}</td>
+                                                        <td>${senderChange.locationRegion.provinceName}</td>
+                                                        <td>${senderChange.locationRegion.districtName}</td>
+                                                        <td>${senderChange.locationRegion.wardName}</td>
+                                                        <td>${senderChange.locationRegion.address}</td>
+                                                    </tr>`;
+                                        let strRec =   `<tr id = "tr_${recipientChange.id}" data-id="${recipientChange.id}">
+                                                            <td>${recipientChange.id}</td>
+                                                            <td>${recipientChange.fullName}</td>
+                                                            <td>${recipientChange.email}</td>
+                                                            <td>${recipientChange.phone}</td>
+                                                            <td>${recipientChange.balance}</td>
+                                                            <td>${recipientChange.locationRegion.provinceName}</td>
+                                                            <td>${recipientChange.locationRegion.districtName}</td>
+                                                            <td>${recipientChange.locationRegion.wardName}</td>
+                                                            <td>${recipientChange.locationRegion.address}</td>
+                                                        </tr>`;
+                                        let currentRowSen = $('#tr_' + sender.id);
+                                        let currentRowRec = $('#tr_' + recipient.id);
+                                        currentRowSen.replaceWith(strSen);
+                                        currentRowRec.replaceWith(strRec);
+                                        $("#showButton").removeClass("showButton").addClass("hideButton");
+                                        $('#modalTransfer').modal('hide');
+                                        $('#transferAmountTra').val("");
+                                        handleClickRow();
+                                    })
+                                    .fail((error) => {
+                                        App.IziToast.showAlertError("Chuyển Tiền Không Thành Công");
+                                        recipient.balance = recipientBalance;
+                                        $.ajax({
+                                            "headers": {
+                                                "accepts": "application/json",
+                                                "content-type": "application/json"
+                                            },
+                                            "async":false,
+                                            "type": "PUT",
+                                            "url": "http://localhost:3002/customers/" + recipient.id,
+                                            "data": JSON.stringify(recipient)
+                                        })
+                                        .done((item) => {
+                                            sender.balance = senderBalance;
+                                            $.ajax({
+                                                "headers": {
+                                                    "accepts": "application/json",
+                                                    "content-type": "application/json"
+                                                },
+                                                "async":false,
+                                                "type": "PUT",
+                                                "url": "http://localhost:3002/customers/" + sender.id,
+                                                "data": JSON.stringify(sender)
+                                            })
+                                            .done((item2) => {
+                                                $("#showButton").removeClass("showButton").addClass("hideButton");
+                                                $('#modalTransfer').modal('hide');
+                                                $('#transferAmountTra').val("");
+                                            })
+                                        })
+                                    })
+                                })
+                                .fail((error) => {
+                                    App.SweetAlert.showAlertError('Cộng Tiền Không Thành Công');
+                                })
+                            })
+                            .fail((error) => {
+                                App.SweetAlert.showAlertError('Trừ Tiền Không Thành Công');
+                            })
+                        })
+                    }
+                }
+            })
+        }
+
+        $('#frmCreateCustomer').validate({
+            rules: {
+                fullNameCre : {
+                    required : true,
+                    minlength : 3,
+                    maxlength : 50,
+                },
+                emailCre : {
+                    required : true,
+                    isEmail : true
+                },
+                phoneCre : {
+                    required: true,
+                    isPhone : true,
+                },
+                addressCre : {
+                    required : true
+                }
+            },
+            messages: {
+                fullNameCre : {
+                    required : "Vui Lòng Nhập Tên Khách Hàng",
+                    minlength : "Tên Phải Ít Nhất 3 Ký Tự",
+                    maxlength : "Tên Không Được Vượt Quá 50 Ký Tự",
+                },
+                emailCre : {
+                    required : "Vui Lòng Nhập Email",
+                },
+                phoneCre : {
+                    required: "Vui Lòng Nhập Số Điện Thoại",
+                },
+                addressCre : {
+                    required : "Vui Lòng Nhập Địa Chỉ Khách Hàng"
+                }
+            },
+            errorLabelContainer: "#modalCreateCustomer .modal-alert-danger",
+            errorPlacement: function (error, element) {
+                error.appendTo("#modalCreateCustomer .modal-alert-danger");
+            },
+            showErrors: function(errorMap, errorList) {
+                if (this.numberOfInvalids() > 0) {
+                    $("#modalCreateCustomer .modal-alert-danger").removeClass("hide").addClass("show");
+                } else {
+                    $("#modalCreateCustomer .modal-alert-danger").removeClass("show").addClass("hide").empty();
+                    $("#frmCreateCustomer input.error").removeClass("error");
+                }
+                this.defaultShowErrors();
+            },
+            submitHandler: function () {
+                doCreate();
+            }
+        })
+
+        $('#frmUpdateCustomer').validate({
+            rules: {
+                fullNameUp : {
+                    required : true,
+                    minlength : 3,
+                    maxlength : 50,
+                },
+                emailUp : {
+                    required : true,
+                    isEmail : true
+                },
+                phoneUp : {
+                    required: true,
+                    isPhone : true,
+                },
+                addressUp : {
+                    required : true
+                }
+            },
+            messages: {
+                fullNameUp : {
+                    required : "Vui Lòng Nhập Tên Khách Hàng",
+                    minlength : "Tên Phải Ít Nhất 3 Ký Tự",
+                    maxlength : "Tên Không Được Vượt Quá 50 Ký Tự",
+                },
+                emailUp : {
+                    required : "Vui Lòng Nhập Email",
+                },
+                phoneUp : {
+                    required: "Vui Lòng Nhập Số Điện Thoại",
+                },
+                addressUp : {
+                    required : "Vui Lòng Nhập Địa Chỉ Khách Hàng"
+                }
+            },
+            errorLabelContainer: "#modalUpdateCustomer .modal-alert-danger",
+            errorPlacement: function (error, element) {
+                error.appendTo("#modalUpdateCustomer .modal-alert-danger");
+            },
+            showErrors: function(errorMap, errorList) {
+                if (this.numberOfInvalids() > 0) {
+                    $("#modalUpdateCustomer .modal-alert-danger").removeClass("hide").addClass("show");
+                } else {
+                    $("#modalUpdateCustomer .modal-alert-danger").removeClass("show").addClass("hide").empty();
+                    $("#frmUpdateCustomer input.error").removeClass("error");
+                }
+                this.defaultShowErrors();
+            },
+            submitHandler: function () {
+                doUpdate();
+            }
+        })
+
+        $('#frmDeposit').validate({
+            rules: {
+                transactionAmountDep: {
+                    required: true,
+                    number: true,
+                    min: 1000,
+                    max: 10000000000
+                }
+            },
+            messages: {
+                transactionAmountDep: {
+                    required: "Vui lòng nhập tiền giao dịch",
+                    number: "Vui lòng chỉ nhập số",
+                    min: "Ít Nhất Bằng 1000",
+                    max: "Lớn nhất 10.000.000.000"
+                }
+            },
+            errorLabelContainer: "#modalDeposit .modal-alert-danger",
+            errorPlacement: function (error, element) {
+                error.appendTo("#modalDeposit .modal-alert-danger");
+            },
+            showErrors: function(errorMap, errorList) {
+                if (this.numberOfInvalids() > 0) {
+                    $("#modalDeposit .modal-alert-danger").removeClass("hide").addClass("show");
+                } else {
+                    $("#modalDeposit .modal-alert-danger").removeClass("show").addClass("hide").empty();
+                    $("#frmDeposit input.error").removeClass("error");
+                }
+                this.defaultShowErrors();
+            },
+            submitHandler: function () {
+                doDeposit();
+            }
+        });
+
+        $('#frmWithdraw').validate({
+            rules: {
+                transactionAmountWi: {
+                    required: true,
+                    number: true,
+                    min: 1000,
+                    max: 1000000000
+                }
+            },
+            messages: {
+                transactionAmountWi: {
+                    required: "Vui lòng nhập tiền giao dịch",
+                    number: "Vui lòng chỉ nhập số",
+                    min: "Ít Nhất Bằng 1000",
+                    max: "Lớn nhất 1.000.000.000"
+                }
+            },
+            errorLabelContainer: "#modalWithdraw .modal-alert-danger",
+            errorPlacement: function (error, element) {
+                error.appendTo("#modalWithdraw .modal-alert-danger");
+            },
+            showErrors: function(errorMap, errorList) {
+                if (this.numberOfInvalids() > 0) {
+                    $("#modalmodalWithdraw .modal-alert-danger").removeClass("hide").addClass("show");
+                } else {
+                    $("#modalWithdraw .modal-alert-danger").removeClass("show").addClass("hide").empty();
+                    $("#frmWithdraw input.error").removeClass("error");
+                }
+                this.defaultShowErrors();
+            },
+            submitHandler: function () {
+                doWithdraw();
+            }
+        });
+
+        $('#frmTransfer').validate({
+            rules: {
+                transferAmountTra: {
+                    required: true,
+                    number: true,
+                    min: 1000,
+                    max: 1000000000
+                }
+            },
+            messages: {
+                transferAmountTra: {
+                    required: "Vui lòng nhập tiền giao dịch",
+                    number: "Vui lòng chỉ nhập số",
+                    min: "Ít Nhất Bằng 1000",
+                    max: "Lớn nhất 1.000.000.000"
+                }
+            },
+            errorLabelContainer: "#modalTransfer .modal-alert-danger",
+            errorPlacement: function (error, element) {
+                error.appendTo("#modalTransfer .modal-alert-danger");
+            },
+            showErrors: function(errorMap, errorList) {
+                if (this.numberOfInvalids() > 0) {
+                    $("#modalTransfer .modal-alert-danger").removeClass("hide").addClass("show");
+                } else {
+                    $("#modalTransfer .modal-alert-danger").removeClass("show").addClass("hide").empty();
+                    $("#frmTransfer input.error").removeClass("error");
+                }
+                this.defaultShowErrors();
+            },
+            submitHandler: function () {
+                doTransfer();
+            }
+        })
+
+        $.validator.addMethod("isNumberWithSpace", function (value, element) {
+            return this.optional(element) || /^\s*[0-9,\s]+\s*$/i.test(value);
+        }, "Vui lòng nhập giá trị số");
+
+        $.validator.addMethod("isEmail",function(value,element){
+            return this.optional(element) || /^\w+([-+.'][^\s]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/i.test(value);
+        }, "Vui Lòng Nhập Đúng Định Dạng Email");
+
+        $.validator.addMethod("isPhone",function(value,element){
+            return this.optional(element) || /^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$/i.test(value);
+        },"Vui Lòng Nhập Đúng Định Dạng Số Điện Thoại Việt Nam");
+
+        $.validator.addMethod("isNumber", function (value, element) {
+            return this.optional(element) || /\\d+/i.test(value);
+        }, "Vui Lòng Nhập Giá Trị Số");
+
+    </script>
+    
+</body>
+</html>

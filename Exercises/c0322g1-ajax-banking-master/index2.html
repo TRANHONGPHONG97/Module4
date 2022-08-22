@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers Information</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/assets/sweetalert/sweetalert2.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <header>
+            <div class="row">
+                <div class="col-sm-5">
+                    <h1>List of customers</h1>
+                </div>
+                <div class="col-sm-7">
+                    <button type="button" id="btnCreate" class="btn btn-outline-light" >
+                        <i class="fa fa-plus-square"></i>
+                        <span> Add New Customer</span>
+                    </button>
+                    <a href="#" class="btn btn-outline-light"><i class="fa fa-history"></i> <span>Transfer
+                            history</span></a>
+                    </h1>
+                </div>
+        </header>
+        <div class="content">
+            <table id="tbCustomers" class="table table-hover">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th class="text-center">#</th>
+
+                        <th class="text-center">Full Name</th>
+                        <th class="text-center">Email</th>
+                        <th class="text-center">Phone</th>
+                        <th class="text-center">Balance</th>
+                        <th class="text-center">Province</th>
+                        <th class="text-center">District</th>
+                        <th class="text-center">Ward</th>
+                        <th class="text-center">Address</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <!-- end container -->
+        <div id="showButton" class="hideButton"></div>
+        <div class="footer">
+            <button id="btnUpdate" type="button" class="btn btn-secondary edit" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Update">
+                <i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>
+                Update
+            </button>
+            <button id="btnDeposit" type="button" class="btn btn-success deposit" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Deposit">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                Deposit
+            </button>
+            <button id="btnWithdraw" type="button" class="btn btn-warning withdraw" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Withdraw">
+                <i class="fa fa-minus" aria-hidden="true"></i>
+                Withdraw
+            </button>
+            <button id="btnTransfer" type="button" class="btn btn-primary transfer" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Transfer">
+                <i class="fa fa-exchange" aria-hidden="true"></i>
+                Transfer
+            </button>
+            <button id="btnDoactive" type="button" class="btn btn-danger suspended" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Suspended">
+                <i class="fa-solid fa-trash-can" aria-hidden="true"></i>
+                Suspended
+            </button>
+
+        </div>
+    </div>
+    <!-- Create Modal -->
+    <div id="mdCreateCustomer" class="modal fade" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal create</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-alert-danger hide"></div>
+                    <form id="frmCreateCustomer" action="" method="POST">
+                        <div class="row mt-3">
+                            <div class="col-lg-4">
+                                <label for="fullNameCre" class="fw-bold">Full Name</label>
+                                <input type="text" id="fullNameCre" name="fullNameCre" class="form-control">
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="emailCre" class="fw-bold">Email</label>
+                                <input type="text" id="emailCre" name="emailCre" class="form-control">
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="phoneCre" class="fw-bold">Phone</label>
+                                <input type="text" id="phoneCre" name="phoneCre" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row mt-3 mb-3">
+                            <div class="col-lg-3">
+                                <label for="provinceCre" class="fw-bold">Province</label>
+                                <select name="provinceCre" id="provinceCre" class="form-select"></select>
+                            </div>
+                            <div class="col-lg-3">
+                                <label for="districtCre" class="fw-bold">District</label>
+                                <select name="districtCre" id="districtCre" class="form-select"></select>
+                            </div>
+                            <div class="col-lg-3">
+                                <label for="wardCre" class="fw-bold">Ward</label>
+                                <select name="wardCre" id="wardCre" class="form-select"></select>
+                            </div>
+                            <div class="col-lg-3">
+                                <label for="addressCre" class="fw-bold">Address</label>
+                                <input type="text" id="addressCre" name="addressCre" class="form-control">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" id="btnCreateCustomer" class="btn btn-outline-primary">
+                        <i class="fa-solid fa-plus"></i>
+                        Create
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalUpdateCustomer" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Customer information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-alert-danger hide"></div>
+                    <form id="frmUpdateCustomer">
+                        <fieldset class="row g-3">
+                            <div class="col-md-4">
+                                <label class="form-label">Full name</label>
+                                <input type="text" class="form-control" id="fullNameUp" name="fullNameUp">
+                                <input type="hidden" id="idCustomerUpdate">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Email</label>
+                                <input type="text" class="form-control" id="emailUp" name="emailUp">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="phoneUp" name="phoneUp">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Province</label>
+                                <select class="form-select" id="provinceUp" name="provinceUp"></select>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">District</label>
+                                <select class="form-select" id="districtUp" name="districtUp"></select>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Ward</label>
+                                <select class="form-select" id="wardUp" name="wardUp"></select>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Address</label>
+                                <input type="text" class="form-control" id="addressUp" name="addressUp">
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" id="btnUpdateCustomer" class="btn btn-outline-secondary">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        Update Customer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/assets/jquery/jquery-v3.6.0.min.js"></script>
+    <script src="/assets/jquery/jquery.validate.min.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/sweetalert/sweetalert2.all.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+
+    <script>
+        function initTooltip() {
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        }
+        
+        // let customer = new Customer();
+
+        // Hàm vẽ danh sách khách hàng
+        function drawCustomers() {
+            $.ajax({
+                "type": "GET",
+                "url": "http://localhost:3030/customers"
+            })
+                .done((data) => {
+                    $.each(data, (i, item) => {
+                        customer = item;
+                        locationRegion = customer.locationRegion;
+
+                        let str = `
+                        <tr id = "tr_${customer.id}" data-id="${customer.id}">
+                            <td><span class="select-tab unselected"></span></td>
+                            <td>${customer.id}</td>
+                            <td>${customer.fullName}</td>
+                            <td>${customer.email}</td>
+                            <td>${customer.phone}</td>
+                            <td>${customer.balance}</td>
+                            <td>${locationRegion.provinceName}</td>
+                            <td>${locationRegion.districtName}</td>
+                            <td>${locationRegion.wardName}</td>
+                            <td>${locationRegion.address}</td>
+                        </tr>
+                    `;
+                        $('#tbCustomers tbody').prepend(str);
+                    });
+                    handleClickTr();
+                    initTooltip()
+                });
+        }
+
+        drawCustomers();
+
+        // Hàm lấy tất cả các tỉnh/tp
+        function getAllProvince() {
+            let listProvince = [];
+            $.ajax({
+                "async": false,
+                "type": "GET",
+                "url": "https://vapi.vnappmob.com/api/province/"
+            })
+                .done((data) => {
+                    listProvince = data;
+                });
+            return listProvince;
+        }
+
+        // Hàm lấy huyện theo id của tỉnh
+        function getAllDistrictByProvinceId(provinceId) {
+            let listDistrict = [];
+            $.ajax({
+                "async": false,
+                "type": "GET",
+                "url": "https://vapi.vnappmob.com/api/province/district/" + provinceId
+            })
+                .done((data) => {
+                    listDistrict = data;
+                });
+            return listDistrict;
+        }
+
+        // Hàm lấy xã theo id của huyện
+        function getAllWardByDistrictId(districtId) {
+            let listWard = [];
+            $.ajax({
+                "async": false,
+                "type": "GET",
+                "url": "https://vapi.vnappmob.com/api/province/ward/" + districtId
+            })
+                .done((data) => {
+                    listWard = data;
+                });
+
+            return listWard;
+        }
+
+
+        // Hàm hiển thị modal tạo mới khách hàng
+        function handleShowCreateModal() {
+            $('#btnCreate').on("click", function () {
+                let listProvinceData = getAllProvince();
+                let strDis = "";
+
+                let provinceIdFirst = (listProvinceData.results)[0].province_id;
+                let listDistrictData = getAllDistrictByProvinceId(provinceIdFirst);
+                $.each(listDistrictData.results, (i, item) => {
+                    strDis += `<option value="${item.district_id}">${item.district_name}</option>`;
+                })
+
+                let strWa = "";
+                let districtIdFirst = (listDistrictData.results)[0].district_id;
+                let listWardData = getAllWardByDistrictId(districtIdFirst);
+                $.each(listWardData.results, (i, item) => {
+                    strWa += `<option value = "${item.ward_id}">${item.ward_name}</option>`;
+                })
+
+                $('#districtCre').prepend(strDis);
+                $('#wardCre').prepend(strWa);
+                $('#mdCreateCustomer').modal('show');
+            })
+        }
+        handleShowCreateModal();
+
+        // Hàm vẽ tỉnh/tp khi hiển thị hộp thoại tạo mới
+        function drawProvincesCre() {
+            return $.ajax({
+                "async": false,
+                "type": "GET",
+                "url": "https://vapi.vnappmob.com/api/province/"
+            })
+                .done((data) => {
+                    $.each(data.results, (i, item) => {
+                        let str = `<option value="${item.province_id}">${item.province_name}</option>`;
+                        $("#provinceCre").append(str);
+                    })
+                });
+        }
+        drawProvincesCre();
+
+        // Hàm xử lý sự kiện thay đổi tỉnh/tp
+        function districtChange(provinceIdChange) {
+            let listProvinceChange = getAllDistrictByProvinceId(provinceIdChange);
+            let strChange = "";
+            $.each(listProvinceChange.results, (i, item) => {
+                strChange += `<option value="${item.district_id}">${item.district_name}</option>`;
+            })
+            $('#districtCre').empty();
+            $('#districtCre').prepend(strChange);
+            let districtIdChange = (listProvinceChange.results)[0].district_id;
+            wardChange(districtIdChange);
+        }
+
+        // Sự kiện thay đổi tỉnh khi tạo mới
+        $('#provinceCre').on('change', function () {
+            let provinceIdChange = $('#provinceCre').val();
+            districtChange(provinceIdChange);
+        })
+
+        // Hàm xử lý sự kiện thay đổi xã khi huyện thay đổi
+        function wardChange(districtIdChange) {
+            let listDistrictChange = getAllWardByDistrictId(districtIdChange);
+            let strChange = "";
+            $.each(listDistrictChange.results, (i, item) => {
+                strChange += `<option value = "${item.ward_id}">${item.ward_name}</option>`;
+            })
+            $('#wardCre').empty();
+            $('#wardCre').prepend(strChange);
+        }
+
+        // Sự kiện thay đổi huyện
+        $('#districtCre').on('change', function () {
+            let districtIdChange = $('#districtCre').val();
+            wardChange(districtIdChange);
+        })
+
+        // Hàm lấy về thông tin khách hàng theo id
+        function getCustomerById(customerId) {
+            return $.ajax({
+                "type": "GET",
+                "url": "http://localhost:3030/customers/" + customerId
+            })
+                .done((data) => {
+                    customer = data;
+                })
+                .fail((jqXHR) => {
+                    Swal.fire({
+                        title: "Id người dùng không tồn tại",
+                        icon: 'error',
+                    })
+                })
+        }
+
+        // Hàm tạo mới khách hàng
+        function doCreate() {
+            let fullName = $('#fullNameCre').val();
+            let email = $('#emailCre').val();
+            let phone = $('#phoneCre').val();
+            let province = $('#provinceCre').val();
+            let district = $('#districtCre').val();
+            let ward = $('#wardCre').val();
+            let address = $('#addressCre').val();
+
+            let provinceName = $('#provinceCre :selected').text();
+            let districtName = $('#districtCre :selected').text();
+            let wardName = $('#wardCre :selected').text();
+
+            let str = `Full Name : ${fullName} 
+                            Email : ${email} 
+                            Phone : ${phone} 
+                            Provice : ${province} 
+                            District : ${district} 
+                            Ward : ${ward} 
+                            Address : ${address}`;
+
+            let listProvince = getAllProvince();
+            let flag = false;
+            $.each(listProvince.results, (i, item) => {
+                if (province == item.province_id) {
+                    flag = true;
+                    return false;
+                }
+            })
+
+            if (flag) {
+                flag = false;
+                let listDistrict = getAllDistrictByProvinceId(province);
+                $.each(listDistrict.results, (i, item) => {
+                    if (district == item.district_id) {
+                        flag = true;
+                        return false;
+                    }
+                })
+
+                if (flag) {
+                    flag = false;
+                    let listWard = getAllWardByDistrictId(district);
+                    $.each(listWard.results, (i, item) => {
+                        if (ward == item.ward_id) {
+                            flag = true;
+                            return false;
+                        }
+                    })
+
+                    if (flag) {
+                        locationRegion.address = address;
+                        locationRegion.provinceId = province;
+                        locationRegion.provinceName = provinceName;
+                        locationRegion.districtId = district;
+                        locationRegion.districtName = districtName;
+                        locationRegion.wardId = ward;
+                        locationRegion.wardName = wardName;
+
+                        delete customer.id;
+                        customer.fullName = fullName;
+                        customer.email = email;
+                        customer.phone = phone;
+                        customer.locationRegion = locationRegion;
+                        customer.balance = 0
+
+                        $.ajax({
+                            "headers": {
+                                "accepts": "application/json",
+                                "content-type": "application/json"
+                            },
+                            "type": "POST",
+                            "url": "http://localhost:3030/customers",
+                            "data": JSON.stringify(customer)
+                        })
+                            .done((item) => {
+                                customer = item;
+                                locationRegion = customer.locationRegion;
+
+                                let str = `
+                                <tr id = "tr_${customer.id}" data-id="${customer.id}">
+                                    <td>${customer.id}</td>
+                                    <td>${customer.fullName}</td>
+                                    <td>${customer.email}</td>
+                                    <td>${customer.phone}</td>
+                                    <td>${customer.balance}</td>
+                                    <td>${locationRegion.provinceName}</td>
+                                    <td>${locationRegion.districtName}</td>
+                                    <td>${locationRegion.wardName}</td>
+                                    <td>${locationRegion.address}</td>
+                                </tr>
+                            `;
+                                $('#tbCustomers tbody').prepend(str);
+                                $('#mdCreateCustomer').modal('hide');
+
+                                Swal.fire({
+                                    title: "Đã tạo khách hàng thành công",
+                                    icon: 'success',
+                                    showConfirmButton: false,
+                                    timer: 2000,
+                                    position: 'top-end',
+                                })
+
+                                $("#frmCreateCustomer")[0].reset();
+                            })
+                            .fail((jqXHR) => {
+                                Swal.fire({
+                                    title: "Tạo mới thất bại",
+                                    icon: 'error',
+                                })
+                            })
+                    }
+                }
+            }
+        }
+        // Sự kiện nhấn vào nút tạo mới khách hàng
+        $('#btnCreateCustomer').on('click', function () {
+            $('#frmCreateCustomer').submit();
+        })
+        // Bắt lỗi tạo mới
+        $('#frmCreateCustomer').validate({
+            rules: {
+                fullNameCre: {
+                    required: true,
+                    minlength: 5,
+                    maxlength: 30,
+                },
+                emailCre: {
+                    required: true,
+                    isEmail: true
+                },
+                phoneCre: {
+                    required: true,
+                    isPhone: true,
+                },
+                addressCre: {
+                    required: true,
+                    minlength: 5,
+                    maxlength: 30,
+                }
+            },
+            messages: {
+                fullNameCre: {
+                    required: "Tên không dược để trống",
+                    minlength: "Tên tối thiểu là 5 ký tự",
+                    maxlength: "Tên tối đa là 30 ký tự",
+                },
+                emailCre: {
+                    required: "Email không được để trống",
+                },
+                phoneCre: {
+                    required: "Số điện thoại không được để trống",
+                },
+                addressCre: {
+                    required: "Địa chỉ không được để trống",
+                    minlength: "Địa chỉ tối thiểu là 5 ký tự",
+                    maxlength: "Địa chỉtối đa là 30 ký tự",
+                }
+            },
+            errorLabelContainer: "#mdCreateCustomer .modal-alert-danger",
+            errorPlacement: function (error, element) {
+                error.appendTo("#mdCreateCustomer .modal-alert-danger");
+            },
+            showErrors: function (errorMap, errorList) {
+                if (this.numberOfInvalids() > 0) {
+                    $("#mdCreateCustomer .modal-alert-danger").removeClass("hide").addClass("show");
+                } else {
+                    $("#mdCreateCustomer .modal-alert-danger").removeClass("show").addClass("hide").empty();
+                    $("#frmCreateCustomer input.error").removeClass("error");
+                }
+                this.defaultShowErrors();
+            },
+            submitHandler: function () {
+                doCreate();
+            }
+        })
+
+        $.validator.addMethod("isEmail", function (value, element) {
+            return this.optional(element) || /^\w+([-+.'][^\s]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/i.test(value);
+        }, "Vui lòng nhập đúng định dạng Email");
+
+        $.validator.addMethod("isPhone", function (value, element) {
+            return this.optional(element) || /^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$/i.test(value);
+        }, "Vui lòng nhập đúng định dạng số điện thoại");
+
+        // Hàm xử lý sự kiện click vào các tr
+        function handleClickTr() {
+            $('#tbCustomers tbody tr').on('click', function () {
+                let rowId = $(this).data('id');
+                $('#tbCustomers tbody tr').removeClass("red");
+                $(this).addClass("red");
+                handleShowUpdateModal(rowId);
+            })
+        }
+
+        // Hàm vẽ tỉnh / tp khi hiển thị hộp thoại update
+        function drawProvincesUp() {
+            return $.ajax({
+                "async": false,
+                "type": "GET",
+                "url": "https://vapi.vnappmob.com/api/province/"
+            })
+                .done((data) => {
+                    $.each(data.results, (i, item) => {
+                        let str = `<option value="${item.province_id}">${item.province_name}</option>`;
+                        $("#provinceUp").prepend(str);
+                    })
+                });
+        }
+        drawProvincesUp();
+        // Hàm vẽ huyện khi hiển thị hộp thoại update
+        function drawDistrictsUp(provinceId) {
+            return $.ajax({
+                "async": false,
+                "type": "GET",
+                "url": "https://vapi.vnappmob.com/api/province/district/" + provinceId
+            })
+                .done((data) => {
+                    $("#districtUp").html("");
+                    $.each(data.results, (i, item) => {
+                        let str = `<option value="${item.district_id}">${item.district_name}</option>`;
+                        $("#districtUp").prepend(str);
+                    })
+                });
+        }
+
+        // Hàm vẽ xã khi hiển thị hộp thoại update
+        function drawWardsUp(districtId) {
+            return $.ajax({
+                "async": false,
+                "type": "GET",
+                "url": "https://vapi.vnappmob.com/api/province/ward/" + districtId
+            })
+                .done((data) => {
+                    $("#wardUp").html("");
+                    $.each(data.results, (i, item) => {
+                        let str = `<option value="${item.ward_id}">${item.ward_name}</option>`;
+                        $("#wardUp").prepend(str);
+                    })
+                });
+        }
+
+        // Hàm hiển thị modal update
+        function handleShowUpdateModal(rowId) {
+
+
+            $('#btnUpdate').on('click', function () {
+                $.ajax({
+                    "async": false,
+                    "type": "GET",
+                    "url": "http://localhost:3030/customers/" + rowId
+                })
+                    .done((data) => {
+                        customer = data;
+                        locationRegion = customer.locationRegion;
+                        $('#fullNameUp').val(customer.fullName);
+                        $('#emailUp').val(customer.email);
+                        $('#phoneUp').val(customer.phone);
+                        $('#addressUp').val(locationRegion.address);
+                        $('#idCustomerUpdate').val(rowId);
+                        $("#provinceUp").val(customer.locationRegion.provinceId);
+
+                        drawDistrictsUp(customer.locationRegion.provinceId).then(() => {
+                            $("#districtUp").val(customer.locationRegion.districtId);
+                            drawWardsUp(customer.locationRegion.districtId).then(() => {
+                                $("#wardUp").val(customer.locationRegion.wardId);
+                            });
+                        });
+
+                        $('#modalUpdateCustomer').modal('show');
+                    })
+                    .fail((jqXHR) => {
+                        Swal.fire({
+                            title: "Người dùng không tồn tại",
+                            icon: 'error',
+                        })
+                    })
+            })
+        }
+
+        // Hàm xử lý sự kiện thay đổi tỉnh/tp khi update
+        function districtChangeUp(provinceIdChange) {
+            let listProvinceChange = getAllDistrictByProvinceId(provinceIdChange);
+            let strChange = "";
+            $.each(listProvinceChange.results, (i, item) => {
+                strChange += `<option value="${item.district_id}">${item.district_name}</option>`;
+            })
+            $('#districtUp').empty();
+            $('#districtUp').prepend(strChange);
+            let districtIdChange = (listProvinceChange.results)[0].district_id;
+            wardChangeUp(districtIdChange);
+        }
+
+
+        // Hàm xử lý sự kiện thay đổi xã khi huyện thay đổi khi update
+        function wardChangeUp(districtIdChange) {
+            let listDistrictChange = getAllWardByDistrictId(districtIdChange);
+            let strChange = "";
+            $.each(listDistrictChange.results, (i, item) => {
+                strChange += `<option value = "${item.ward_id}">${item.ward_name}</option>`;
+            })
+            $('#wardUp').empty();
+            $('#wardUp').prepend(strChange);
+        }
+        // Sự kiện thay đổi tỉnh khi update
+        $('#provinceUp').on('change', function () {
+            let provinceIdChange = $('#provinceUp').val();
+            districtChangeUp(provinceIdChange);
+        })
+        // Sự kiện thay đổi huyện khi update
+        $('#districtUp').on('change', function () {
+            let districtIdChange = $('#districtUp').val();
+            wardChangeUp(districtIdChange);
+        })
+        // Sự kiện nhấn nút update
+        $('#btnUpdateCustomer').on('click', function () {
+            $('#frmUpdateCustomer').submit();
+        })
+
+        function doUpdate() {
+            let fullName = $('#fullNameUp').val();
+            let email = $('#emailUp').val();
+            let phone = $('#phoneUp').val();
+            let province = $('#provinceUp').val();
+            let district = $('#districtUp').val();
+            let ward = $('#wardUp').val();
+            let address = $('#addressUp').val();
+            let provinceName = $('#provinceUp :selected').text();
+            let districtName = $('#districtUp :selected').text();
+            let wardName = $('#wardUp :selected').text();
+            let customerId = $('#idCustomerUpdate').val();
+
+            let str = `Full Name : ${fullName} 
+                        Email : ${email} 
+                        Phone : ${phone} 
+                        Provice : ${province} 
+                        District : ${district} 
+                        Ward : ${ward} 
+                        Address : ${address}`;
+
+            let listProvince = getAllProvince();
+            let flag = false;
+            $.each(listProvince.results, (i, item) => {
+                if (province == item.province_id) {
+                    flag = true;
+                    return false;
+                }
+            })
+            if (flag) {
+                flag = false;
+                let listDistrict = getAllDistrictByProvinceId(province);
+                $.each(listDistrict.results, (i, item) => {
+                    if (district == item.district_id) {
+                        flag = true;
+                        return false;
+                    }
+                })
+                if (flag) {
+                    flag = false;
+                    let listWard = getAllWardByDistrictId(district);
+                    $.each(listWard.results, (i, item) => {
+                        if (ward == item.ward_id) {
+                            flag = true;
+                            return false;
+                        }
+                    })
+                    if (flag) {
+
+                        getCustomerById(customerId).then(() => {
+                            locationRegion.address = address;
+                            locationRegion.provinceId = province;
+                            locationRegion.provinceName = provinceName;
+                            locationRegion.districtId = district;
+                            locationRegion.districtName = districtName;
+                            locationRegion.wardId = ward;
+                            locationRegion.wardName = wardName;
+
+
+                            customer.fullName = fullName;
+                            customer.email = email;
+                            customer.phone = phone;
+                            customer.locationRegion = locationRegion;
+
+                            $.ajax({
+                                "headers": {
+                                    "accepts": "application/json",
+                                    "content-type": "application/json"
+                                },
+                                "type": "PUT",
+                                "url": "http://localhost:3030/customers/" + customer.id,
+                                "data": JSON.stringify(customer)
+                            })
+                                .done((item) => {
+
+                                    customer = item;
+                                    locationRegion = customer.locationRegion;
+
+                                    let currentRow = $('#tr_' + customer.id);
+
+                                    let updateRow = ` <tr id = "tr_${customer.id}" data-id="${customer.id}">
+                                                        <td>${customer.id}</td>
+                                                        <td>${customer.fullName}</td>
+                                                        <td>${customer.email}</td>
+                                                        <td>${customer.phone}</td>
+                                                        <td>${customer.balance}</td>
+                                                        <td>${locationRegion.provinceName}</td>
+                                                        <td>${locationRegion.districtName}</td>
+                                                        <td>${locationRegion.wardName}</td>
+                                                        <td>${locationRegion.address}</td>
+                                                    </tr>`;
+                                    currentRow.replaceWith(updateRow);
+                                    Swal.fire({
+                                        title: "Cập nhật thành công",
+                                        icon: 'success',
+                                        showConfirmButton: false,
+                                        timer: 2000,
+                                        position: 'top-end',
+                                    })
+
+                                    $('#modalUpdateCustomer').modal('hide');
+                                    handleClickTr();
+                                })
+                                .fail((jqXHR) => {
+                                    Swal.fire({
+                                        title: "Cập nhật thất bại",
+                                        icon: 'error',
+                                    })
+                                })
+                        })
+                    } else {
+                        Swal.fire({
+                            title: "Xã/Thị trấn không tồn tại",
+                            icon: 'error',
+                        })
+                    }
+                } else {
+                    Swal.fire({
+                        title: "Phường/huyện không tồn tại",
+                        icon: 'error',
+                    })
+                }
+            } else {
+                Swal.fire({
+                    title: "Tỉnh/thành phố không tồn tại",
+                    icon: 'error',
+                })
+            }
+        }
+    </script>
+</body>
+
+</html>

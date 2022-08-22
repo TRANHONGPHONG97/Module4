@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "..\\ajax_banking"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "HTML_Model",
+		"liveServer.settings.port": 5501
+	}
+}

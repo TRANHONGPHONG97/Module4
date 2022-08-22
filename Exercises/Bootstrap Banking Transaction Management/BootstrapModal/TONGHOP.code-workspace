@@ -1,0 +1,33 @@
+{
+	"folders": [
+		{
+			"name": "TONGHOP",
+			"path": "c:\\BO\\TONGHOP"
+		},
+		{
+			"name": "F8",
+			"path": "c:\\BO\\F8"
+		},
+		{
+			"path": "c:\\BO\\caseStudyModule1"
+		},
+		{
+			"path": "c:\\BO\\quizModule1"
+		},
+		{
+			"path": "..\\..\\..\\..\\Module3"
+		},
+		{
+			"path": "c:\\Users\\Admin\\Pictures\\THM3"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\HTML_Model"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "HTML_Model"
+	}
+}
