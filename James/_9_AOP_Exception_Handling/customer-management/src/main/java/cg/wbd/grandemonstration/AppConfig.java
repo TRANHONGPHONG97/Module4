@@ -9,7 +9,6 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.data.web.config.EnableSpringDataWebSupport;
 import org.springframework.format.FormatterRegistry;
@@ -38,7 +37,6 @@ import java.util.Properties;
 @EnableJpaRepositories("cg.wbd.grandemonstration.repository")
 @EnableSpringDataWebSupport
 @EnableTransactionManagement
-@EnableAspectJAutoProxy
 public class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
 
     private ApplicationContext appContext;
@@ -96,7 +94,7 @@ public class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/cms");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/cms4");
         dataSource.setUsername("root");
         dataSource.setPassword("CHUcu123456");
         return dataSource;
@@ -119,6 +117,5 @@ public class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
     @Override
     public void addFormatters(FormatterRegistry registry) {
         registry.addFormatter(new ProvinceFormatter(appContext.getBean(ProvinceService.class)));
-
     }
 }

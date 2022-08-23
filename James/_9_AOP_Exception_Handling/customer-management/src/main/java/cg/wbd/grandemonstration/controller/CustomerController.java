@@ -1,5 +1,6 @@
 package cg.wbd.grandemonstration.controller;
 
+import cg.wbd.grandemonstration.exception.DuplicateEmailException;
 import cg.wbd.grandemonstration.model.Customer;
 import cg.wbd.grandemonstration.model.Province;
 import cg.wbd.grandemonstration.service.CustomerService;
@@ -28,7 +29,7 @@ public class CustomerController {
     }
 
     @GetMapping
-    public ModelAndView showList(Optional<String> s, Pageable pageInfo) throws Exception {
+    public ModelAndView showList(Optional<String> s, Pageable pageInfo) {
         ModelAndView modelAndView = new ModelAndView("/customers/list");
         Page<Customer> customers = s.isPresent() ? search(s, pageInfo) : getPage(pageInfo);
         modelAndView.addObject("keyword", s.orElse(null));
@@ -38,23 +39,23 @@ public class CustomerController {
 
     @GetMapping("/{id}")
     public ModelAndView showInformation(@PathVariable Long id) {
-        try {
-            ModelAndView modelAndView = new ModelAndView("/customers/info");
-            Optional<Customer> customerOptional = customerService.findOne(id);
-            modelAndView.addObject("customer", customerOptional.get());
-            return modelAndView;
-        } catch (Exception e) {
-            return new ModelAndView("redirect:/customers");
-        }
+        ModelAndView modelAndView = new ModelAndView("/customers/info");
+        Optional<Customer> customerOptional = customerService.findOne(id);
+        modelAndView.addObject("customer", customerOptional.get());
+        return modelAndView;
     }
 
     @PostMapping
-    public ModelAndView updateCustomer(Customer customer) {
+    public ModelAndView updateCustomer(Customer customer) throws DuplicateEmailException {
         customerService.save(customer);
         return new ModelAndView("redirect:/customers");
     }
+    @ExceptionHandler(DuplicateEmailException.class)
+    public ModelAndView showInputNotAcceptable() {
+        return new ModelAndView("/customers/inputs-not-acceptable");
+    }
 
-    private Page<Customer> getPage(Pageable pageInfo) throws Exception {
+    private Page<Customer> getPage(Pageable pageInfo) {
         return customerService.findAll(pageInfo);
     }
 
