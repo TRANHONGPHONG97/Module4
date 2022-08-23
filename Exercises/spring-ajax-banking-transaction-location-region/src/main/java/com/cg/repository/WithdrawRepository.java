@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IWithDrawRepository extends JpaRepository<Withdraw, Long> {
+public interface WithdrawRepository extends JpaRepository<Withdraw, Long> {
 }

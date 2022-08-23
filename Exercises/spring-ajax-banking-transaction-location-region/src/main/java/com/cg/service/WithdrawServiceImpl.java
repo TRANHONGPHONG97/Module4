@@ -1,6 +1,5 @@
 package com.cg.service;
 
-import com.cg.model.Customer;
 import com.cg.model.Withdraw;
 import com.cg.repository.CustomerRepository;
 import com.cg.repository.IWithDrawRepository;
@@ -10,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 @Service
-public class WithDrawService implements IWithDrawService {
+public class WithdrawServiceImpl implements WithdrawService {
 
     @Autowired
     IWithDrawRepository withDrawRepository;

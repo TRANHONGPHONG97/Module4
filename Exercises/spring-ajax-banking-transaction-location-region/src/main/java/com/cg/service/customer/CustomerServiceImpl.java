@@ -1,6 +1,7 @@
-package com.cg.service;
+package com.cg.service.customer;
 
 import com.cg.model.Customer;
+import com.cg.model.dto.CustomerDTO;
 import com.cg.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,13 +32,19 @@ public class CustomerServiceImpl implements CustomerService {
     public Customer save(Customer customer) {
         return customerRepository.save(customer);
     }
+
     @Override
     public void remove(Long id) {
         customerRepository.deleteById(id);
     }
+
     @Override
     public List<Customer> findAll() {
         return (List<Customer>) customerRepository.findAll();
     }
 
+    @Override
+    public List<CustomerDTO> findAllCustomerDTO() {
+        return customerRepository.findAllCustomerDTO();
+    }
 }
