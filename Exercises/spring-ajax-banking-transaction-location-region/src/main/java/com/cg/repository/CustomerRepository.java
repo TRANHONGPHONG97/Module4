@@ -1,6 +1,7 @@
 package com.cg.repository;
 
 import com.cg.model.Customer;
+import com.cg.model.dto.CustomerDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -9,20 +10,67 @@ import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Optional;
 
 
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
     List<Customer> findByIdIsNot(Long id);
+    Boolean existsByEmail(String email);
+    List<Customer> findAllByDeletedFalse();
+
+    @Query("SELECT NEW com.cg.model.dto.CustomerDTO(" +
+            "c.id, " +
+            "c.fullName, " +
+            "c.email, " +
+            "c.phone, " +
+            "c.balance, " +
+            "c.locationRegion " +
+            ") FROM Customer AS c")
+    List<CustomerDTO> findAllCustomerDTO();
+    @Query("SELECT NEW com.cg.model.dto.CustomerDTO (" +
+            "c.id, " +
+            "c.fullName, " +
+            "c.email, " +
+            "c.phone, " +
+            "c.balance, " +
+            "c.locationRegion " +
+            ") FROM Customer AS c WHERE c.id = :id")
+    Optional<CustomerDTO> findCustomerDTOBy(@Param("id") Long id);
+
+    @Query("SELECT NEW com.cg.model.dto.CustomerDTO (" +
+            "c.id, " +
+            "c.fullName, " +
+            "c.email, " +
+            "c.phone, " +
+            "c.balance, " +
+            "c.locationRegion) " +
+            "FROM Customer c WHERE c.id = ?1 ")
+    Optional<CustomerDTO> getCustomerDTOById(Long id);
+
     @Modifying
     @Query("UPDATE Customer AS c " +
             "SET c.balance = c.balance + :balance " +
             "WHERE c.id = :customerId")
     void incrementBalance(@Param("customerId") Long customerId, @Param("balance") BigDecimal balance);
-//@Modifying
-//    @Query(value = "UPDATE Customer AS c " +
-//            "SET c.balance = c.balance - :balance " +
-//            "WHERE c.id = :customerId")
-//    void unIncrementBalance(@Param("customerId") Long customerId, @Param("balance") BigDecimal balance);
+@Query("SELECT NEW com.cg.model.dto.CustomerDTO (" +
+        "c.id, " +
+        "c.fullName, " +
+        "c.email, " +
+        "c.phone, " +
+        "c.balance, " +
+        "c.locationRegion) " +
+        "FROM Customer c WHERE c.email = ?1 AND c.id <> ?2 ")
+Optional<CustomerDTO> findCustomerDTOByEmailAndIdIsNot(String email, Long id);
+
+    @Modifying
+    @Query("UPDATE Customer AS c " +
+            "SET c.balance = c.balance - :transactionAmount " +
+            "WHERE c.id = :id")
+    void reduceBalance(@Param("id") Long id, @Param("transactionAmount") BigDecimal transactionAmount);
+
+    @Query("SELECT NEW com.cg.model.dto.CustomerDTO (c.id, c.fullName, c.email, c.phone, c.balance, c.locationRegion) FROM Customer c WHERE c.deleted = false ")
+    List<CustomerDTO> findAllCustomerDTOByDeletedIsFalse();
+
 }

@@ -18,6 +18,7 @@ public interface ITransferDTO {
 
     @JsonFormat(pattern = "HH:mm:ss", timezone = "Asia/Ho_Chi_Minh")
     Date getCreatedAt();
+
     BigDecimal getTransferAmount();
     Long getFees();
     BigDecimal getFeesAmount();

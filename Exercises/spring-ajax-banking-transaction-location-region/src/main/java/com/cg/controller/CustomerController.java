@@ -5,10 +5,10 @@ import com.cg.model.Customer;
 import com.cg.model.Deposit;
 import com.cg.model.Transfer;
 import com.cg.model.Withdraw;
-import com.cg.service.CustomerService;
-import com.cg.service.DepositService;
-import com.cg.service.TransferService;
-import com.cg.service.WithDrawService;
+import com.cg.service.customer.CustomerService;
+import com.cg.service.deposit.DepositService;
+import com.cg.service.transfer.TransferService;
+import com.cg.service.withdraw.WithdrawServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -32,7 +32,7 @@ public class CustomerController {
     @Autowired
     private TransferService transferService;
     @Autowired
-    private WithDrawService withDrawService;
+    private WithdrawServiceImpl withdrawServiceImpl;
 
 
     @GetMapping
@@ -285,7 +285,7 @@ public class CustomerController {
         withdraw.setCustomer(customer);
 
 //2 thằng này tạo 2 đối tượng
-        withDrawService.save(withdraw);
+        withdrawServiceImpl.save(withdraw);
         Customer newCustomer = customerService.save(customer);
 
         modelAndView.addObject("customer", newCustomer);

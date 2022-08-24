@@ -455,6 +455,7 @@
 
                                 let str = `
                                 <tr id = "tr_${customer.id}" data-id="${customer.id}">
+                                    <td><span class="select-tab unselected"></span></td>
                                     <td>${customer.id}</td>
                                     <td>${customer.fullName}</td>
                                     <td>${customer.email}</td>
@@ -489,10 +490,22 @@
                 }
             }
         }
+
+          // Hàm xử lý sự kiện click vào các tr
+          function handleClickTr() {
+            $('#tbCustomers tbody tr').on('click', function () {
+                let rowId = $(this).data('id');
+                $('#tbCustomers tbody tr').removeClass("red");
+                $(this).addClass("red");
+                handleShowUpdateModal(rowId);
+            })
+        }
+
         // Sự kiện nhấn vào nút tạo mới khách hàng
         $('#btnCreateCustomer').on('click', function () {
             $('#frmCreateCustomer').submit();
         })
+        
         // Bắt lỗi tạo mới
         $('#frmCreateCustomer').validate({
             rules: {
@@ -559,15 +572,7 @@
             return this.optional(element) || /^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$/i.test(value);
         }, "Vui lòng nhập đúng định dạng số điện thoại");
 
-        // Hàm xử lý sự kiện click vào các tr
-        function handleClickTr() {
-            $('#tbCustomers tbody tr').on('click', function () {
-                let rowId = $(this).data('id');
-                $('#tbCustomers tbody tr').removeClass("red");
-                $(this).addClass("red");
-                handleShowUpdateModal(rowId);
-            })
-        }
+      
 
         // Hàm vẽ tỉnh / tp khi hiển thị hộp thoại update
         function drawProvincesUp() {

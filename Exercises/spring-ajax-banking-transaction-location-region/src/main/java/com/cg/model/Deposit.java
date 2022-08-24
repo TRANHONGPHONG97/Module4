@@ -2,6 +2,12 @@ package com.cg.model;
 
 import com.cg.model.BaseEntity;
 import com.cg.model.Customer;
+import com.cg.model.dto.DepositDTO;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.experimental.Accessors;
 
 import javax.persistence.*;
 import javax.validation.constraints.DecimalMax;
@@ -9,8 +15,13 @@ import javax.validation.constraints.DecimalMin;
 import java.math.BigDecimal;
 
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table(name = "deposits")
+@Accessors(chain = true)
 public class Deposit extends BaseEntity {
 
     @Id
@@ -26,36 +37,9 @@ public class Deposit extends BaseEntity {
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
-    public Deposit() {
-    }
-
-    public Deposit(Long id, BigDecimal transactionAmount, Customer customer) {
-        this.id = id;
-        this.transactionAmount = transactionAmount;
-        this.customer = customer;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public BigDecimal getTransactionAmount() {
-        return transactionAmount;
-    }
-
-    public void setTransactionAmount(BigDecimal transactionAmount) {
-        this.transactionAmount = transactionAmount;
-    }
-
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public DepositDTO toDepositDTO() {
+        return new DepositDTO()
+                .setId(String.valueOf(id))
+                .setTransactionAmount(String.valueOf(transactionAmount));
     }
 }

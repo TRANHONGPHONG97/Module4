@@ -1,11 +1,21 @@
 package com.cg.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.experimental.Accessors;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 
-
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table(name = "transfers")
+@Accessors(chain = true)
 public class Transfer extends BaseEntity {
 
     @Id
@@ -31,72 +41,4 @@ public class Transfer extends BaseEntity {
     @JoinColumn(name = "recipient_id", nullable = false)
     private Customer recipient;
 
-    public Transfer() {
     }
-
-    public Transfer(Long id, BigDecimal transferAmount, float fees, BigDecimal feesAmount, BigDecimal transactionAmount, Customer sender, Customer recipient) {
-        this.id = id;
-        this.transferAmount = transferAmount;
-        this.fees = fees;
-        this.feesAmount = feesAmount;
-        this.transactionAmount = transactionAmount;
-        this.sender = sender;
-        this.recipient = recipient;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public BigDecimal getTransferAmount() {
-        return transferAmount;
-    }
-
-    public void setTransferAmount(BigDecimal transferAmount) {
-        this.transferAmount = transferAmount;
-    }
-
-    public float getFees() {
-        return fees;
-    }
-
-    public void setFees(float fees) {
-        this.fees = fees;
-    }
-
-    public BigDecimal getFeesAmount() {
-        return feesAmount;
-    }
-
-    public void setFeesAmount(BigDecimal feesAmount) {
-        this.feesAmount = feesAmount;
-    }
-
-    public BigDecimal getTransactionAmount() {
-        return transactionAmount;
-    }
-
-    public void setTransactionAmount(BigDecimal transactionAmount) {
-        this.transactionAmount = transactionAmount;
-    }
-
-    public Customer getSender() {
-        return sender;
-    }
-
-    public void setSender(Customer sender) {
-        this.sender = sender;
-    }
-
-    public Customer getRecipient() {
-        return recipient;
-    }
-
-    public void setRecipient(Customer recipient) {
-        this.recipient = recipient;
-    }
-}

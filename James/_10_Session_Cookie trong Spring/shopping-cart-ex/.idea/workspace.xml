@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3a8dc41a-6802-432f-b02a-ab95f57bbbe2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/exception/DataInputException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hit-counter/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hit-counter/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hit-counter/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hit-counter/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hit-counter/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hit-counter/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hit-counter/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hit-counter/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hit-counter/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hit-counter/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hit-counter/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hit-counter/src/main/java/com/codegym/HelloServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hit-counter/src/main/java/com/codegym/config/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hit-counter/src/main/java/com/codegym/config/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hit-counter/src/main/java/com/codegym/controller/CounterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hit-counter/src/main/java/com/codegym/model/Counter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hit-counter/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hit-counter/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../save-user/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../save-user/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../save-user/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../save-user/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../save-user/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../save-user/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../save-user/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../save-user/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../save-user/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../save-user/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../save-user/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../save-user/src/main/java/com/codegym/HelloServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../save-user/src/main/java/com/codegym/config/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../save-user/src/main/java/com/codegym/config/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../save-user/src/main/java/com/codegym/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../save-user/src/main/java/com/codegym/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../save-user/src/main/webapp/WEB-INF/views/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../save-user/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../save-user/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/HelloServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/config/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/config/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/ShoppingCartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/model/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/repository/IProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/bootstrap413/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/bootstrap413/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/bootstrap413/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/bootstrap413/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/bootstrap413/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/bootstrap413/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/bootstrap413/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/bootstrap413/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/bootstrap413/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/bootstrap413/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/bootstrap413/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/bootstrap413/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/bootstrap413/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/bootstrap413/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/bootstrap413/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/bootstrap413/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/bootstrap413/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/bootstrap413/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/bootstrap413/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/bootstrap413/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/css/dataTables.bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/css/dataTables.bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/css/dataTables.bootstrap4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/css/dataTables.bootstrap4.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/css/dataTables.foundation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/css/dataTables.foundation.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/css/dataTables.jqueryui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/css/dataTables.jqueryui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/css/dataTables.semanticui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/css/dataTables.semanticui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/css/jquery.dataTables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/css/jquery.dataTables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/images/sort_asc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/images/sort_asc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/images/sort_both.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/images/sort_desc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/images/sort_desc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/js/dataTables.bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/js/dataTables.bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/js/dataTables.bootstrap4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/js/dataTables.bootstrap4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/js/dataTables.foundation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/js/dataTables.foundation.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/js/dataTables.jqueryui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/js/dataTables.jqueryui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/js/dataTables.semanticui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/js/dataTables.semanticui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/js/jquery.dataTables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/datatables/js/jquery.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/boostrap/jquery/jquery-3.5.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/image/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/image/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/image/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/image/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/image/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/shop.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/codegym/HelloServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/codegym/config/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/codegym/config/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/codegym/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/codegym/controller/ShoppingCartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/codegym/model/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/codegym/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/codegym/repository/IProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/codegym/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/codegym/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/src/main/webapp/WEB-INF/views/cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/src/main/webapp/WEB-INF/views/error.404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/src/main/webapp/WEB-INF/views/shop.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_11_Web Service_RESTful/customer-management/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_11_Web Service_RESTful/customer-management/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_11_Web Service_RESTful/customer-management/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_11_Web Service_RESTful/customer-management/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_11_Web Service_RESTful/customer-management/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_11_Web Service_RESTful/customer-management/src/main/java/com/codegym/cms/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_11_Web Service_RESTful/customer-management/src/main/java/com/codegym/cms/config/AppInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_11_Web Service_RESTful/customer-management/src/main/java/com/codegym/cms/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_11_Web Service_RESTful/customer-management/src/main/java/com/codegym/cms/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_11_Web Service_RESTful/customer-management/src/main/java/com/codegym/cms/repository/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_11_Web Service_RESTful/customer-management/src/main/java/com/codegym/cms/service/customer/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_11_Web Service_RESTful/customer-management/src/main/java/com/codegym/cms/service/customer/ICustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/c0322g1-spring-mvc-banking-transaction" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/c0322g1-spring-mvc-banking-transaction" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/json-server" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/json-server" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-baking-api/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-baking-api/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-baking-api/src/main/java/com/mvpt/exception/DataInputException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-baking-api/src/main/java/com/mvpt/exception/DataInputException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-baking-api/src/main/java/com/mvpt/exception/EmailExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-baking-api/src/main/java/com/mvpt/exception/EmailExistsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-baking-api/src/main/java/com/mvpt/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-baking-api/src/main/java/com/mvpt/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-baking-api/src/main/java/com/mvpt/exception/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-baking-api/src/main/java/com/mvpt/exception/ResourceNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-baking-api/src/main/webapp/WEB-INF/views/transfer/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-baking-api/src/main/webapp/WEB-INF/views/transfer/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/.idea/artifacts/spring_ajax_banking_transaction_location_region_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/.idea/artifacts/spring_ajax_banking_transaction_location_region_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/controller/rest/CustomerRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/controller/rest/CustomerRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/Deposit.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/Deposit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/LocationRegion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/LocationRegion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/Transfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/Transfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/Withdraw.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/Withdraw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/dto/CustomerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/dto/CustomerDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/dto/DepositDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/dto/DepositDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/dto/ITransferHistoryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/dto/ITransferHistoryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/dto/LocationRegionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/dto/LocationRegionDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/dto/TransferHistoryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/dto/TransferHistoryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/dto/WithdrawDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/dto/WithdrawDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/repository/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/repository/LocationRegionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/repository/LocationRegionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/DepositServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/DepositServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/WithdrawService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/WithdrawService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/WithdrawServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/WithdrawServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/customer/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/customer/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/customer/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/customer/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/locationRegion/LocationRegionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/locationRegion/LocationRegionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/locationRegion/LocationRegionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/locationRegion/LocationRegionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercises/spring_mvc_maven/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercises/spring_mvc_maven/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/.gradle/4.10.3/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/.gradle/4.10.3/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/.gradle/4.10.3/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/.gradle/4.10.3/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/build/classes/java/main/cg/wbd/grandemonstration/AppConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/build/classes/java/main/cg/wbd/grandemonstration/AppInit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/build/classes/java/main/cg/wbd/grandemonstration/controller/CustomerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/build/classes/java/main/cg/wbd/grandemonstration/exception/DuplicateEmailException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/build/classes/java/main/cg/wbd/grandemonstration/formatter/ProvinceFormatter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/build/classes/java/main/cg/wbd/grandemonstration/model/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/build/classes/java/main/cg/wbd/grandemonstration/model/Province.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/build/classes/java/main/cg/wbd/grandemonstration/repository/CustomerRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/build/classes/java/main/cg/wbd/grandemonstration/repository/ProvinceRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/build/classes/java/main/cg/wbd/grandemonstration/service/CustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/build/classes/java/main/cg/wbd/grandemonstration/service/ProvinceService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/build/classes/java/main/cg/wbd/grandemonstration/service/impl/CustomerServiceImplWithSpringData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/build/classes/java/main/cg/wbd/grandemonstration/service/impl/ProvinceServiceImplWithSpringData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/build/libs/Gran Demonstration-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/src/main/java/cg/wbd/grandemonstration/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/src/main/java/cg/wbd/grandemonstration/controller/CustomerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/src/main/java/cg/wbd/grandemonstration/exception/DuplicateEmailException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/src/main/java/cg/wbd/grandemonstration/model/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/src/main/java/cg/wbd/grandemonstration/service/CustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/src/main/java/cg/wbd/grandemonstration/service/impl/CustomerServiceImplWithSpringData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../_9_AOP_Exception_Handling/customer-management/src/main/webapp/WEB-INF/templates/customers/inputs-not-acceptable.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2DkOc2HYH9aYn6Rx8Anw7b0Nrir" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Module4/James/_10_Session_Cookie trong Spring/shopping-cart-ex/src/main/webapp"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Module4\James\_10_Session_Cookie trong Spring\shopping-cart-ex\src\main\webapp" />
+      <recent name="D:\Module4\James\_10_Session_Cookie trong Spring\shopping-cart-ex\src\main" />
+      <recent name="D:\Module4\James\_10_Session_Cookie trong Spring\shopping-cart-ex\src\main\java" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Module4\James\_10_Session_Cookie trong Spring\shopping-cart-ex\src\main\webapp\WEB-INF\templates" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.65" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.65" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Gradle : com.codegym : shopping-cart-ex-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="f80b2c1e-938a-49ed-9b5f-c5315362b81b" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="8743" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : com.codegym : shopping-cart-ex-1.0-SNAPSHOT.war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3a8dc41a-6802-432f-b02a-ab95f57bbbe2" name="Changes" comment="" />
+      <created>1661239693598</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661239693598</updated>
+      <workItem from="1661239695140" duration="4840000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
