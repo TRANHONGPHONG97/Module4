@@ -1,6 +1,5 @@
 package com.cg.controller;
 
-
 import com.cg.model.City;
 import com.cg.model.CityDTO;
 import com.cg.model.Nation;
@@ -57,7 +56,7 @@ public class CityController {
         String population = cityDTO.getPopulation();
 
         if(!ValidDateUtils.isNumberValid(area)){
-            errors.add("Vui lòng nhập diện tích hợp lệ!");
+            errors.add("Vui lòng nhập diện tích hợp lệ! Diện tích của một thành phố phải là một số dương!");
         } else if (area.length() > 10) {
             errors.add("Diện tích quá lớn vượt quá diện tích thực của thành phố!");
         }else {
@@ -67,7 +66,7 @@ public class CityController {
         }
 
         if(!ValidDateUtils.isNumberValid(gdp)){
-            errors.add("Vui lòng GDP tích hợp lệ!");
+            errors.add("Vui lòng GDP  hợp lệ! GDP của một thành phố phải là một số dương!");
         } else if (gdp.length() > 10) {
             errors.add("GDP quá lớn vượt quá GDP thực của thành phố!");
         }else {
@@ -77,11 +76,11 @@ public class CityController {
         }
 
         if(!ValidDateUtils.isNumberValid(population)){
-            errors.add("Vui lòng nhập diện tích hợp lệ!");
+            errors.add("Vui lòng nhập dân số hợp lệ! Dân số của một thành phố phải là một số dương!");
         } else if (area.length() > 10) {
             errors.add("Dân số quá lớn vượt quá dân số thực của thành phố!");
         }else {
-            if(Integer.parseInt(area) <= 0) {
+            if(Integer.parseInt(population) <= 0) {
                 errors.add("Dân số của một thành phố phải là một số dương!");
             }
         }
@@ -129,34 +128,6 @@ public class CityController {
         modelAndView.addObject("city",city);
         return modelAndView;
     }
-
-//    @PostMapping("/delete")
-//    public ModelAndView doDelete(@PathVariable Long id){
-//        ModelAndView modelAndView = new ModelAndView("/city/list");
-//
-//        Iterable<Nation> nations = nationService.findAll();
-//        modelAndView.addObject("nations",nations);
-//        Iterable<City> cities = cityService.findAll();
-//
-//        cityService.remove(id);
-//        modelAndView.addObject("cities",cities);
-//        return modelAndView;
-
-//    @GetMapping("/delete/{id}")
-//    public ModelAndView showDeleteForm(@PathVariable Long id) {
-//
-//        Optional<City> city = cityService.findById(id);
-//        Iterable<Nation> nations = nationService.findAll();
-//        if (city.isPresent()) {
-//            ModelAndView modelAndView = new ModelAndView("/city/delete");
-//            modelAndView.addObject("city", city.get());
-//            return modelAndView;
-//        } else {
-//            ModelAndView modelAndView = new ModelAndView("/error.404");
-//            return modelAndView;
-//        }
-//    }
-//
     @PostMapping("/delete")
     public ModelAndView doDelete(@ModelAttribute ("city") City city){
         ModelAndView modelAndView = new ModelAndView();
@@ -169,7 +140,6 @@ public class CityController {
         return modelAndView;
     }
 
-
     @GetMapping("/edit/{id}")
     public ModelAndView showEditForm(@PathVariable String id) {
         ModelAndView modelAndView;
@@ -177,7 +147,7 @@ public class CityController {
         Optional<City> city = Optional.empty();
         Iterable<Nation> nations = nationService.findAll();
         if(!ValidDateUtils.isNumberValid(id)){
-            errors.add("Id không hợp lê!");
+            errors.add("Id không hợp lệ!");
         }else {
             city = cityService.findById(Long.parseLong(id));
             if(!city.isPresent()){
@@ -199,8 +169,6 @@ public class CityController {
         return modelAndView;
     }
 
-
-
     @PostMapping("/edit/{id}")
     public ModelAndView editCustomer(@PathVariable String id, @Validated @ModelAttribute("city") CityDTO cityDTO, BindingResult bindingResult){
         ModelAndView modelAndView;
@@ -208,14 +176,12 @@ public class CityController {
         List<String> errors = new ArrayList<>();
         Iterable<Nation> nations = nationService.findAll();
 
-
-
         String area = cityDTO.getArea();
         String gdp = cityDTO.getGdp();
         String population = cityDTO.getPopulation();
 
         if(!ValidDateUtils.isNumberValid(area)){
-            errors.add("Vui lòng nhập diện tích hợp lệ!");
+            errors.add("Vui lòng nhập diện tích hợp lệ! Diện tích của một thành phố phải là một số dương!");
         } else if (area.length() > 10) {
             errors.add("Diện tích quá lớn vượt quá diện tích thực của thành phố!");
         }else {
@@ -225,7 +191,7 @@ public class CityController {
         }
 
         if(!ValidDateUtils.isNumberValid(gdp)){
-            errors.add("Vui lòng GDP tích hợp lệ!");
+            errors.add("Vui lòng GDP tích hợp lệ! GDP của một thành phố phải là một số dương!");
         } else if (gdp.length() > 10) {
             errors.add("GDP quá lớn vượt quá GDP thực của thành phố!");
         }else {
@@ -235,11 +201,11 @@ public class CityController {
         }
 
         if(!ValidDateUtils.isNumberValid(population)){
-            errors.add("Vui lòng nhập diện tích hợp lệ!");
+            errors.add("Vui lòng nhập dân số hợp lệ! Dân số của một thành phố phải là một số dương!");
         } else if (area.length() > 10) {
             errors.add("Dân số quá lớn vượt quá dân số thực của thành phố!");
         }else {
-            if(Integer.parseInt(area) <= 0) {
+            if(Integer.parseInt(population) <= 0) {
                 errors.add("Dân số của một thành phố phải là một số dương!");
             }
         }

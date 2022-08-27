@@ -1,6 +1,5 @@
 package com.cg.model;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,26 +19,25 @@ import javax.validation.constraints.Size;
 public class CityDTO {
     private Long id;
 
-
     @NotBlank(message = "Tên thành phố không được để trống!")
-    @Size(min = 5, max = 50, message = "Tên phải gồm từ 5-50 kí tự!")
+    @Size(min = 5, max = 30, message = "Tên thành phố phải từ 5-30 kí tự!")
     private String cityName;
 
-    @NotBlank(message = "Tên thành phố không được để trống!")
+    @NotBlank(message = "Tên quốc gia không được để trống!")
     private String nation;
 
-    @NotBlank(message = "Tên thành phố không được để trống!")
+    @NotBlank(message = "Diện tích không được để trống!")
     private String area;
 
-    @NotBlank(message = "Tên thành phố không được để trống!")
+    @NotBlank(message = "Dân số không được để trống!")
     private String population;
 
-    @NotBlank(message = "Tên thành phố không được để trống!")
+    @NotBlank(message = "GDP không được để trống!")
     private String gdp;
 
-    @Size(max = 255, message = "Mô tả quá dài vượt quá 255 kí tự")
+    @NotBlank(message = "Mô tả không được để trống!")
+    @Size(min = 5, max = 255, message = "Mô tả từ 5 - 255 kí tự")
     private String description;
-
 
     public City toCity(Nation nation) {
         return new City()

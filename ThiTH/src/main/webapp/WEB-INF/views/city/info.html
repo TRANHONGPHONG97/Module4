@@ -108,70 +108,6 @@
                                             </div>
                                         </div>
 
-
-
-
-
-<!--                                        <div class="form-group row justify-content-end">-->
-<!--                                            <div class="col-md-10">-->
-<!--                                                <button type="submit" class="btn btn-outline-success waves-effect waves-light mr-1">-->
-<!--                                                    <i class="fas fa-plus"> </i> Update-->
-<!--                                                </button>-->
-
-<!--                                                <a href="/cities" class="btn btn-outline-secondary waves-effect">-->
-<!--                                                    Cancel-->
-<!--                                                </a>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                        <div class="row">-->
-<!--                                            <div class="col-8">-->
-<!--                                                <h2 class="card-title d-inline">Thành phố </h2>-->
-<!--                                            </div>-->
-<!--                                            <div class="col-4 text-end">-->
-<!--                                                <a href="/" class="btn btn-outline-primary">-->
-<!--                                                    <span>Xem danh sách thành phố</span>-->
-<!--                                                </a>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                        <div class="row">-->
-<!--                                            <table class="table table-hover">-->
-<!--                                                <thead>-->
-
-<!--                                                </thead>-->
-<!--                                                <tbody>-->
-<!--                                                <th:block th:object="${city}">-->
-<!--                                                    <h2 class="card-title d-inline" th:text="${city.cityName}"></h2>-->
-
-<!--                                                    <tr>-->
-<!--                                                        <td>Tên:</td>-->
-<!--                                                        <td th:text="${city.cityName}"></td>-->
-<!--                                                    </tr>-->
-<!--                                                    <tr>-->
-<!--                                                        <td>Quốc gia:</td>-->
-<!--                                                        <td th:text="${city.naiton.nationName}"></td>-->
-<!--                                                    </tr>-->
-<!--                                                    <tr>-->
-<!--                                                        <td>Diện tích:</td>-->
-<!--                                                        <td th:text="${city.area}"></td>-->
-<!--                                                    </tr>-->
-<!--                                                    <tr>-->
-<!--                                                        <td>Dân số:</td>-->
-<!--                                                        <td th:text="${city.population}"></td>-->
-<!--                                                    </tr>-->
-<!--                                                    <tr>-->
-<!--                                                        <td>GDP:</td>-->
-<!--                                                        <td th:text="${city.gdp}"></td>-->
-<!--                                                    </tr>-->
-<!--                                                    <tr>-->
-<!--                                                        <td>Giới thiệu:-->
-<!--                                                            <textarea name="" th:text="${city.description}" id="" cols="30" rows="10"></textarea>-->
-<!--                                                        </td>-->
-<!--                                                    </tr>-->
-<!--                                                    <hr>-->
-<!--                                                </th:block>-->
-<!--                                                </tbody>-->
-<!--                                            </table>-->
-<!--                                        </div>-->
                                     </form>
                                 </div>
 
@@ -186,38 +122,10 @@
             </div>
             <!-- end row -->
 
-            <th:block th:if="${hasError} == true">
-                <div class="fixed-bottom alert alert-danger">
-                    <h5>Please correct errors below:</h5>
-                    <ul>
-                        <li th:each="err : ${#fields.errors('city.*')}" th:text="${err}"></li>
-                        <li th:each="error : ${errors}" th:text="${error}"></li>
-                    </ul>
-                </div>
-            </th:block>
 
         </div> <!-- end container-fluid -->
 
-        <!-- Start Content-->
 
-        <!--        <footer class="footer">-->
-        <!--            <div class="container-fluid">-->
-        <!--                <c:choose>-->
-        <!--                    <c:when test = "${requestScope['message'] == null}" >-->
-        <!--                    </c:when>-->
-        <!--                    <c:when test='${requestScope["message"] == "Thêm sản phẩm thành công!"}'>-->
-        <!--                        <%@ include file="/alert/success.jsp"%>-->
-        <!--                    </c:when>-->
-        <!--                    <c:otherwise>-->
-        <!--                        <%@ include file="/alert/warning.jsp"%>-->
-        <!--                    </c:otherwise>-->
-        <!--                </c:choose>-->
-
-        <!--                <c:if test='${requestScope["errors"] != null}'>-->
-        <!--                    <%@ include file="/alert/danger.jsp"%>-->
-        <!--                </c:if>-->
-        <!--            </div>-->
-        <!--        </footer>-->
 
     </div> <!-- end content -->
 

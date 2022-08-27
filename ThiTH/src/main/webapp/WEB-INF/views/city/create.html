@@ -64,7 +64,7 @@
                                         <div class="form-group row">
                                             <label for="name" class="col-md-2 col-form-label">Tên<span class="text-danger">*</span></label>
                                             <div class="col-md-8">
-                                                <input th:field="*{cityName}" name="name" id="name" type="text" placeholder="Tên" required="" class="form-control">
+                                                <input th:field="*{cityName}" name="name" id="name" type="text" placeholder="Name" required="" class="form-control">
                                             </div>
                                         </div>
 
@@ -108,10 +108,6 @@
                                             </div>
                                         </div>
 
-
-
-
-
                                         <div class="form-group row justify-content-end">
                                             <div class="col-md-10">
                                                 <button type="submit" class="btn btn-outline-success waves-effect waves-light mr-1">
@@ -152,27 +148,6 @@
             </th:block>
 
         </div> <!-- end container-fluid -->
-
-        <!-- Start Content-->
-
-<!--        <footer class="footer">-->
-<!--            <div class="container-fluid">-->
-<!--                <c:choose>-->
-<!--                    <c:when test = "${requestScope['message'] == null}" >-->
-<!--                    </c:when>-->
-<!--                    <c:when test='${requestScope["message"] == "Thêm sản phẩm thành công!"}'>-->
-<!--                        <%@ include file="/alert/success.jsp"%>-->
-<!--                    </c:when>-->
-<!--                    <c:otherwise>-->
-<!--                        <%@ include file="/alert/warning.jsp"%>-->
-<!--                    </c:otherwise>-->
-<!--                </c:choose>-->
-
-<!--                <c:if test='${requestScope["errors"] != null}'>-->
-<!--                    <%@ include file="/alert/danger.jsp"%>-->
-<!--                </c:if>-->
-<!--            </div>-->
-<!--        </footer>-->
 
     </div> <!-- end content -->
 

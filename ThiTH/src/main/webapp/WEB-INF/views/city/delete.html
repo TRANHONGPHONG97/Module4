@@ -132,9 +132,7 @@
                                                 </button>
                                                 </button>
 
-                                                <!--                                                <a href="/cities" class="btn btn-outline-secondary waves-effect">-->
-                                                <!--                                                   Cancel-->
-                                                <!--                                                </a>-->
+
                                             </div>
                                         </div>
 
@@ -157,40 +155,8 @@
                     <div class="fixed-bottom alert alert-success" th:text="${message}"></div>
                 </div>
             </div>
-            <!-- end row -->
-
-            <!--            <th:block th:if="${hasError} == true">-->
-            <!--                <div class="fixed-bottom alert alert-danger">-->
-            <!--                    <h5>Please correct errors below:</h5>-->
-            <!--                    <ul>-->
-            <!--                        <li th:each="err : ${#fields.errors('city.*')}" th:text="${err}"></li>-->
-            <!--                        <li th:each="error : ${errors}" th:text="${error}"></li>-->
-            <!--                    </ul>-->
-            <!--                </div>-->
-            <!--            </th:block>-->
 
         </div> <!-- end container-fluid -->
-
-        <!-- Start Content-->
-
-        <!--        <footer class="footer">-->
-        <!--            <div class="container-fluid">-->
-        <!--                <c:choose>-->
-        <!--                    <c:when test = "${requestScope['message'] == null}" >-->
-        <!--                    </c:when>-->
-        <!--                    <c:when test='${requestScope["message"] == "Thêm sản phẩm thành công!"}'>-->
-        <!--                        <%@ include file="/alert/success.jsp"%>-->
-        <!--                    </c:when>-->
-        <!--                    <c:otherwise>-->
-        <!--                        <%@ include file="/alert/warning.jsp"%>-->
-        <!--                    </c:otherwise>-->
-        <!--                </c:choose>-->
-
-        <!--                <c:if test='${requestScope["errors"] != null}'>-->
-        <!--                    <%@ include file="/alert/danger.jsp"%>-->
-        <!--                </c:if>-->
-        <!--            </div>-->
-        <!--        </footer>-->
 
     </div> <!-- end content -->
 

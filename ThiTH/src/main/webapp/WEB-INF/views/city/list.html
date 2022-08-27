@@ -54,12 +54,12 @@
                         <div class="card-box">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <h4 class="header-title">Danh sách thành phố</h4>
+                                    <h4 class="header-title">City of list</h4>
                                 </div>
                                 <div class="col-sm-3"></div>
                                 <div class="col-sm-3">
                                     <a th:href="@{/cities/create}" class="btn btn-outline-primary btn-add" style="margin-left: 15px">
-                                        <i class="fa fa-plus"></i> Thêm thành phố
+                                        <i class="fa fa-plus"></i> Create new city
                                     </a>
                                 </div>
                             </div>
@@ -70,9 +70,9 @@
                                 <thead>
                                 <tr>
                                     <th class="col-1">#</th>
-                                    <th class="col-3">Thành phố</th>
-                                    <th class="col-3">Quốc gia</th>
-                                    <th class="col-3"></th>
+                                    <th class="col-3">City</th>
+                                    <th class="col-3">Nation</th>
+                                    <th class="col-3">Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -86,11 +86,11 @@
                                         </td>
                                         <td th:text="${city.getNation().getNationName()}"></td>
                                         <td>
-                                            <a th:href="@{/cities/edit/__${city.id}__}" class="btn btn-outline-secondary">
-                                                <i class="fas fa-pen-square"></i>
+                                            <a th:href="@{/cities/edit/__${city.id}__}" class="btn btn-outline-secondary" title="Update">
+                                                <i class="fas fa-pen-square"> Update </i>
                                             </a>
-                                            <a th:href="@{/cities/delete/__${city.id}__}" class="btn btn-outline-danger">
-                                                <i class="far fa-trash-alt"></i>
+                                            <a th:href="@{/cities/delete/__${city.id}__}" class="btn btn-outline-danger" title="Delete">
+                                                <i class="far fa-trash-alt"> Delete</i>
                                             </a>
                                         </td>
                                     </tr>
