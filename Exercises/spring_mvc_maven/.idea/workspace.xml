@@ -5,39 +5,166 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="032c3d9d-bc9c-4572-afb3-a19216bca126" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/controller/rest/CustomerRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/dto/CustomerDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/dto/ITransferHistoryDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/dto/LocationRegionDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/dto/WithdrawDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/repository/LocationRegionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/WithdrawService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/locationRegion/LocationRegionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/locationRegion/LocationRegionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../c0322g1-spring-ajax-banking-transaction-location-region" beforeDir="false" afterPath="$PROJECT_DIR$/../c0322g1-spring-ajax-banking-transaction-location-region" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../c0322g1-spring-mvc-banking-transaction" beforeDir="false" afterPath="$PROJECT_DIR$/../c0322g1-spring-mvc-banking-transaction" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../json-server" beforeDir="false" afterPath="$PROJECT_DIR$/../json-server" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-ajax-baking-api/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-ajax-baking-api/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-ajax-baking-api/src/main/webapp/WEB-INF/views/transfer/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-ajax-baking-api/src/main/webapp/WEB-INF/views/transfer/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/.idea/artifacts/spring_ajax_banking_transaction_location_region_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/.idea/artifacts/spring_ajax_banking_transaction_location_region_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/BaseEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/Deposit.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/Deposit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/LocationRegion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/LocationRegion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/Transfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/Transfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/Withdraw.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/Withdraw.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/dto/DepositDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/dto/DepositDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/dto/TransferHistoryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/model/dto/TransferHistoryDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/repository/CustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/repository/IWithDrawRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/repository/WithdrawRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/customer/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/customer/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/DepositServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/DepositServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/IWithDrawService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/WithDrawService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-ajax-banking-transaction-location-region/src/main/java/com/cg/service/WithdrawServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_banking_transaction/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_banking_transaction/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../James/_18_Spring Boot Starters &amp; Common Configurations/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../James/_18_Spring Boot Starters &amp; Common Configurations/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/ResortManagerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/config/WebSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/controller/ContractController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/controller/CustomerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/controller/EmployeeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/controller/MainController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/controller/ServiceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/dto/contract/ContractDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/dto/customer/CustomerDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/dto/employee/EmployeeDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/model/contract/AttachService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/model/contract/Contract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/model/contract/ContractDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/model/customer/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/model/customer/CustomerType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/model/employee/Division.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/model/employee/Education.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/model/employee/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/model/employee/Position.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/model/facility/Facility.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/model/facility/FacilityType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/model/facility/RentType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/model/login/AppUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/model/login/MyUserDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/model/login/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/repository/Service/RentTypeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/repository/Service/ServiceRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/repository/Service/ServiceTypeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/repository/contract/AttachServiceRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/repository/contract/ContractDetailRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/repository/contract/ContractRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/repository/customer/CustomerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/repository/customer/CustomerTypeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/repository/employee/EmployeeDivisionRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/repository/employee/EmployeeEducationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/repository/employee/EmployeePositonRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/repository/employee/EmployeeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/repository/login/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/restControllerAjax/ContractControllerAjax.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/restControllerAjax/EmployeeControllerAjax.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/restControllerAjax/ServiceControllerAjax.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/contract/AttachServiceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/contract/ContractDetailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/contract/ContractService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/contract/IAttachService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/contract/IContractDetailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/contract/IContractService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/contract/ITotalPay.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/contract/TotalPay.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/customer/CustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/customer/CustomerTypeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/customer/ICustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/customer/ICustomerTypeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/employee/EmployeeDivisionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/employee/EmployeeEducationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/employee/EmployeePositionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/employee/EmployeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/employee/IEmployeeDivisionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/employee/IEmployeeEducationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/employee/IEmployeePositionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/employee/IEmployeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/login/MyUserDetailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/login/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/login/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/service/IRentTypeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/service/IServiceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/service/IServiceTypeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/service/RentTypeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/service/ServiceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/service/service/ServiceTypeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/java/com/codegym/util/WebUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/bootstrap413/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/bootstrap413/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/bootstrap413/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/bootstrap413/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/bootstrap413/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/bootstrap413/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/bootstrap413/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/bootstrap413/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/bootstrap413/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/bootstrap413/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/bootstrap413/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/bootstrap413/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/bootstrap413/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/bootstrap413/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/bootstrap413/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/bootstrap413/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/bootstrap413/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/bootstrap413/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/bootstrap413/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/bootstrap413/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/css/login1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/css/dataTables.bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/css/dataTables.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/css/dataTables.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/css/dataTables.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/css/dataTables.foundation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/css/dataTables.foundation.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/css/dataTables.jqueryui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/css/dataTables.jqueryui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/css/dataTables.semanticui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/css/dataTables.semanticui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/css/jquery.dataTables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/css/jquery.dataTables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/images/sort_asc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/images/sort_asc_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/images/sort_both.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/images/sort_desc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/images/sort_desc_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/js/dataTables.bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/js/dataTables.bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/js/dataTables.bootstrap4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/js/dataTables.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/js/dataTables.foundation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/js/dataTables.foundation.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/js/dataTables.jqueryui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/js/dataTables.jqueryui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/js/dataTables.semanticui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/js/dataTables.semanticui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/js/jquery.dataTables.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/datatables/js/jquery.dataTables.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/image/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/image/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/image/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/image/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/image/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/image/abc.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/image/background_addnew.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/image/def.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/image/deff.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/image/ggg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/image/logo_web6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/image/xiz.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/static/jquery/jquery-3.5.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/templates/contract/ContractAdd.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/templates/contract/ContractList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/templates/customer/CustomerAdd.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/templates/customer/CustomerEdit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/templates/customer/CustomerList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/templates/employee/EmployeeList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/templates/login/403.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/templates/login/login1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/templates/login/myLogin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/templates/service/ServiceAdd.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/main/resources/templates/service/ServiceList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resort_manager/src/test/java/com/codegym/ResortManagerApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +188,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Module4/Exercises/SpringMVC_ModelAndView",
+    "last_opened_file_path": "D:/Module4/Exercises/spring_mvc_maven",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -100,6 +227,7 @@
       <updated>1660203352209</updated>
       <workItem from="1660203353966" duration="103000" />
       <workItem from="1661222659785" duration="66000" />
+      <workItem from="1661747393516" duration="11000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <th:block th:replace="/layout/head :: head"/>
+    <link rel="stylesheet" href="/assets/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <title>LOGIN</title>
+
+    <style>
+        body {
+            /* background-color: red;
+      animation-name: example;
+      animation-duration: 1s; */
+            animation: colorBackground 20s infinite;
+            -webkit-animation: colorBackground 20s infinite;
+            -moz-animation: colorBackground 20s infinite;
+            -o-animation: colorBackground 20s infinite
+        }
+
+        @keyframes colorBackground {
+            0% {
+                background-color: red;
+            }
+
+            25% {
+                background-color: yellow;
+            }
+
+            50% {
+                background-color: blue;
+            }
+
+            100% {
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<!--dang ky-->
+<div class="container" id="container">
+    <div class="form-container sign-up-container">
+        <form>
+            <h1>Register Account</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your email for registration</span>
+            <input type="email" placeholder="Email" id="emailReg"/>
+            <input type="password" placeholder="Password" id="passwordReg"/>
+<!--            <input type="text" placeholder="Role" id="roleReg" name="roleReg"/>-->
+            <select  id="role" class="form-select">
+                <option value="1">ADMIN</option>
+                <option value="2">USER</option>
+            </select>
+            <br>
+            <br>
+            <br>
+            <button id="btnRegister">Register</button>
+        </form>
+    </div>
+
+
+    <!--    login  -->
+    <div class="form-container sign-in-container">
+        <form>
+            <h1>Sign in</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your account</span>
+            <input type="email" placeholder="Email" id="usernameLog"/>
+            <input type="password" placeholder="Password" id="passwordLog"/>
+            <a href="#">Forgot your password?</a>
+            <button id="btnLogin" type="button">Sign In</button>
+        </form>
+    </div>
+
+
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>To keep connected with us please login with your personal info</p>
+                <button class="ghost"  id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>Hello, Friend!</h1>
+                <p>Enter your personal details and start journey with us</p>
+                <button class="ghost" id="signUp">Register</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/assets/jquery/jquery-v3.6.0.min.js"></script>
+<th:block th:replace="/layout/script :: script"/>
+<script>
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+
+    signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+    });
+
+    signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+    });
+
+    $("#btnLogin").on('click', () => {
+        let username = $("#usernameLog").val();
+        let password = $("#passwordLog").val();
+        let user = {
+            username,
+            password
+        }
+        $.ajax({
+            headers: {
+                "accept": "application/json",
+                "content-type": "application/json"
+            },
+            type: "POST",
+            url: "http://localhost:8080/api/auth/login",
+            data: JSON.stringify(user)
+        })
+            .done((data) => {
+                console.log(data)
+                App.SweetAlert.showSuccessAlert('Đăng nhập thành công');
+                setTimeout(() => {
+                    location.href = "/products";
+                }, 2000);
+            })
+            .fail((jqXHR) => {
+                console.log(jqXHR)
+                App.SweetAlert.showErrorAlert('Email hoặc mật khẩu không đúng!');
+            })
+    })
+
+    $("#btnRegister").on("click", () => {
+        let user = {
+            username: $("#emailReg").val(),
+            password: $("#passwordReg").val(),
+            role: {
+                id: $("#role").val()
+            }
+        }
+        console.log(user);
+
+        $.ajax({
+            "headers": {
+                "accept": "application/json",
+                "content-type": "application/json"
+            },
+            "type": "POST",
+            "url": "http://localhost:8080/api/auth/register",
+            "data": JSON.stringify(user)
+        })
+            .done(() => {
+
+                App.SweetAlert.showSuccessAlert("Đăng ký thành công!");
+                setTimeout(() => {
+
+                }, 2000);
+            })
+            .fail((jqXHR) => {
+                console.log(jqXHR)
+                App.SweetAlert.showErrorAlert("Đăng ký thất bại!");
+            })
+    });
+
+</script>
+</body>
+
+</html>
