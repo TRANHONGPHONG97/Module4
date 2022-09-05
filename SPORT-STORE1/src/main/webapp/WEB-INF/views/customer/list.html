@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CỬA HÀNG THỂ THAO PHONG TRẦN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Responsive bootstrap 4 admin template" name="description">
+    <meta content="Coderthemes" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- App favicon -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/images/icon.jpg">
+
+    <!-- Table datatable css -->
+    <link href="\assets\libs\datatables\dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+    <link href="\assets\libs\datatables\buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="\assets\libs\datatables\responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="\assets\libs\datatables\select.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- App css -->
+    <link href="\assets\css\bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet">
+    <link href="\assets\css\icons.min.css" rel="stylesheet" type="text/css">
+    <link href="\assets\css\app.min.css" rel="stylesheet" type="text/css" id="app-stylesheet">
+
+    <script src="/assets/js/app/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+<!-- Begin page -->
+<div id="wrapper">
+    <th:block th:replace="/layout/navbar:: navbar"/>
+    <th:block th:replace="/layout/left_side :: left-side"/>
+
+    <div class="content-page">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title-right">
+                            </div>
+                            <h4 class="page-title">Dashboard</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-box">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h4 class="header-title">LIST CUSTOMER</h4>
+                                </div>
+                                <div class="col-sm-3"></div>
+<!--                                <div class="col-sm-3">-->
+<!--                                    <button id="btn-created" class="btn btn-primary"-->
+<!--                                            style="margin-left: 15px">-->
+<!--                                        <i class="fa fa-plus"></i> Add new Customer-->
+<!--                                    </button>-->
+<!--                                </div>-->
+                            </div>
+                            <br>
+                            <table id="tableListUser" class="table table-bordered dt-responsive nowrap"
+                                   style="border-collapse: collapse; border-spacing: 0; width: 100%;text-align: center ">
+                                <thead>
+                                <tr>
+                                    <th style="text-align: center" class="col-1">#</th>
+                                    <th style="text-align: center" class="col-2">Full Name</th>
+                                    <th style="text-align: center" class="col-1">Phone</th>
+                                    <th style="text-align: center" class="col-2">User Name</th>
+                                    <th style="text-align: center" class="col-1">Role</th>
+                                    <th style="text-align: center" class="col-1">Status</th>
+                                    <th style="text-align: center" class="col-5" colspan="4">Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+
+            </div> <!-- end container-fluid -->
+
+        </div> <!-- end content -->
+        <th:block th:replace="/customer/modal_create_user :: modal_create_user"/>
+        <th:block th:replace="/customer/modal_update_user :: modal_update_user"/>
+    </div>
+        <!-- Footer Start -->
+        <th:block th:replace="/layout/footer :: footer"/>
+        <!-- end Footer -->
+</div>
+        </div>
+    </div>
+</div>
+<!-- END wrapper -->
+<th:block th:replace="/layout/script:: script"/>
+<th:block th:replace="/layout/script :: script-page"/>
+
+
+<!-- Vendor js -->
+<script src="/assets/js/vendor.min.js"></script>
+<!-- Responsive Table js -->
+<script src="/assets/libs/rwd-table/rwd-table.min.js"></script>
+<!-- Init js -->
+<script src="/assets/js/pagesr/esponsive-table.init.js"></script>
+
+
+<script>
+
+    let user = new User();
+
+    let role = new Role();
+
+    function loadAllUser() {
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/api/users"
+        }).done((data) => {
+            $.each(data, (i, item) => {
+                user = item
+                let str = `
+                 <tr id="tr_${user.id}">
+                    <td>${user.id}</td>
+                    <td>${user.fullName}</td>
+                    <td>${user.phone}</td>
+                    <td>${user.username}</td>
+                    <td>${user.role.code}</td>
+                    <td>${user.status}</td>
+
+                    <td><button data-id="${user.id}" class="btn btn-secondary btn-update"><i class="fas fa-pen-square"></i> Update</button></td>
+                    <td><button data-id="${user.id}" class="btn btn-danger btn-delete"><i class="far fa-trash-alt"></i> Delete</button></td>
+                    <td><button data-id="${user.id}" class="btn btn-success btn-active"><i class="fas fa-unlock"></i> Active</button></td>
+                    <td><button data-id="${user.id}" class="btn btn-warning btn-block"><i class="fas fa-lock"></i> Block</button></td>
+
+                </tr>
+    `
+                $("#tableListUser tbody").append(str)
+            })
+
+            handleShowModalCreate()
+            handleShowModalUpdate()
+            handlerShowConfirmDelete()
+            doBlock()
+            doActive()
+
+        }).fail(() => {
+
+        })
+    }
+
+    function getUserById(userId) {
+        return $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/api/users/user/" + userId,
+        }).done((data) => {
+            user = data;
+        }).fail(() => {
+            App.IziToast.showErrorAlert("Fail user")
+        })
+    }
+
+    function handleShowModalCreate() {
+        $(".btn-created").on("click", () => {
+            $("#modalCreateUser").modal("show");
+        })
+    }
+
+
+    $(".btnCreate").on("click", () => {
+        role.id = $("#roleCre").val();
+        role.code = $("#roleCre :selected").text();
+        delete user.id;
+        user.fullName = $("#fullNameCre").val();
+        user.phone = $("#phoneCre").val();
+        user.username = $("#EmailCre").val();
+        user.password = $("#passwordCre").val();
+        user.role = role;
+
+        $.ajax({
+            headers: {
+                "accept": "application/json",
+                "content-type": "application/json"
+            },
+            type: "POST",
+            url: "http://localhost:8080/api/auth/register",
+            data: JSON.stringify(user)
+        }).done((data) => {
+            console.log(data)
+            user = data
+            let str = `
+                 <tr id="tr_${user.id}">
+                    <td>${user.id}</td>
+                    <td>${user.fullName}</td>
+                    <td>${user.phone}</td>
+                    <td>${user.username}</td>
+                    <td>${user.role.code}</td>
+                    <td>${user.status}</td>
+                     <td><button data-id="${user.id}" class="btn btn-secondary btn-update"><i class="fas fa-pen-square"></i>Update</button></td>
+                    <td><button data-id="${user.id}" class="btn btn-danger btn-delete"><i class="far fa-trash-alt"></i>Delete</button></td>
+                    <td><button data-id="${user.id}" class="btn btn-success btn-active"><i class="fas fa-unlock"></i>Active</button></td>
+                    <td><button data-id="${user.id}" class="btn btn-warning btn-block"><i class="fas fa-lock"></i>Block</button></td>
+                </tr>
+    `;
+            $("#tableListUser tbody").prepend(str)
+            $("#modalCreateUser").modal("hide");
+            App.IziToast.showSuccessAlert("Create new user successful!")
+            handleShowModalCreate()
+            handleShowModalUpdate()
+            handlerShowConfirmDelete()
+            doBlock()
+            doActive()
+            $("#fullNameCre").val("");
+            $("#phoneCre").val("");
+            $("#EmailCre").val("");
+            $("#passwordCre").val("");
+        })
+            .fail((jqXHR) => {
+                $('#modalCreateUser .modal-alert-danger').html('').removeClass('hide').addClass('show');
+                if (jqXHR.responseJSON.message) {
+                    let msg = jqXHR.responseJSON.message;
+                    let str = `<label id="message-error" class="error" for="message">${msg}</label>`;
+                    $('#modalCreateUser .modal-alert-danger').append(str);
+                }
+                else
+                if (jqXHR.responseJSON) {
+                    $.each(jqXHR.responseJSON, (key, item) => {
+                        let str = `<label id="${key}-error" class="error" for="${key}">${item}</label>`;
+                        $("#" + key).addClass("error");
+
+                        $('#modalCreateUser .modal-alert-danger').append(str);
+                    })
+                }
+            })
+    })
+    function handleShowModalUpdate() {
+        $(".btn-update").on("click", function () {
+            let id = $(this).data("id")
+            getUserById(id).then(() => {
+                $("#modalUpdateUser").modal("show");
+                $("#fullNameUp").val(user.fullName);
+                $("#phoneUp").val(user.phone);
+                $("#EmailUp").val(user.username)
+                $("#idUserUp").val(user.id);
+            })
+        })
+    }
+    $(".btnUpdateUser").on("click", () => {
+        role.id = $("#roleUp").val();
+        role.code = $("#roleUp :selected").text();
+
+        user.id = $("#idUserUp").val();
+        user.fullName = $("#fullNameUp").val();
+        user.phone = $("#phoneUp").val();
+        user.username = $("#EmailUp").val();
+        user.role = role;
+
+        $.ajax({
+            headers: {
+                "accept": "application/json",
+                "content-type": "application/json"
+            },
+            type: "PUT",
+            url: "http://localhost:8080/api/users/update",
+            data: JSON.stringify(user)
+        }).done((data) => {
+            console.log(data);
+            $("#modalUpdateUser").modal("hide");
+            App.SweetAlert.showSuccessAlert("Edit user successful")
+            let currentRow = $("#tr_" + data.id);
+            let rowUpdate = `
+             <tr id="tr_${data.id}">
+                    <td>${data.id}</td>
+                    <td>${data.fullName}</td>
+                    <td>${data.phone}</td>
+                    <td>${data.username}</td>
+                    <td>${data.role.code}</td>
+                    <td>${data.status}</td>
+                     <td><button data-id="${user.id}" class="btn btn-secondary btn-update"><i class="fas fa-pen-square"></i>Update</button></td>
+                    <td><button data-id="${user.id}" class="btn btn-danger btn-delete"><i class="far fa-trash-alt"></i>Delete</button></td>
+                    <td><button data-id="${user.id}" class="btn btn-success btn-active"><i class="fas fa-unlock"></i>Active</button></td>
+                    <td><button data-id="${user.id}" class="btn btn-warning btn-block"><i class="fas fa-lock"></i>Block</button></td>
+                </tr>
+            `
+            currentRow.replaceWith(rowUpdate);
+            handleShowModalCreate()
+            handleShowModalUpdate()
+            handlerShowConfirmDelete()
+            doBlock()
+            doActive()
+        })
+            .fail((jqXHR) => {
+                console.log(jqXHR);
+                $('#modalUpdateUser .modal-alert-danger').html('').removeClass('hide').addClass('show');
+
+                if (jqXHR.status === 401) {
+                    let msg = "Please login !!";
+
+                    let str = `<label id="message-error" class="error" for="message">${msg}</label>`;
+
+                    $('#modalUpdateUser .modal-alert-danger').append(str);
+                }
+                else {
+                    if (jqXHR.status === 403) {
+                        let msg = "You are not authorized to perform this function !!";
+
+                        let str = `<label id="message-error" class="error" for="message">${msg}</label>`;
+
+                        $('#modalUpdateUser .modal-alert-danger').append(str);
+                    }
+                    else {
+                        if (jqXHR.responseJSON.message) {
+                            let msg = jqXHR.responseJSON.message;
+
+                            let str = `<label id="message-error" class="error" for="message">${msg}</label>`;
+
+                            $('#modalUpdateUser .modal-alert-danger').append(str);
+                        }
+                        else if (jqXHR.responseJSON) {
+                            $.each(jqXHR.responseJSON, (key, item) => {
+                                let str = `<label id="${key}-error" class="error" for="${key}">${item}</label>`;
+                                $("#" + key).addClass("error");
+
+                                $('#modalUpdateUser .modal-alert-danger').append(str);
+                            })
+                        }
+                    }
+                }
+            })
+    })
+
+    function handlerShowConfirmDelete() {
+        $(".btn-delete").on("click", function () {
+            let customerId = $(this).data("id");
+            Swal.fire({
+                title: 'Are you sure you want to delete this user?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Agree'
+            }).then((result) => {
+                    if (result.isConfirmed) {
+                        doDelete(customerId);
+                    }
+                }
+            )
+        })
+    }
+
+    function doDelete(customerId) {
+        $.ajax({
+            type: "DELETE",
+            url: "http://localhost:8080/api/users/delete/" + customerId,
+        })
+            .done(() => {
+
+                $("#tr_" + customerId).remove();
+
+                App.SweetAlert.showSuccessAlert("User has been deleted. ")
+
+            }).fail((jqXHR) => {
+            if (jqXHR.status === 403) {
+                let msg = "You are not authorized to perform this function !!";
+
+                App.SweetAlert.showErrorAlert(msg)
+            } else {
+                App.SweetAlert.showErrorAlert("User information invalid");
+            }
+        })
+    }
+
+    function doActive() {
+        $(".btn-active").on("click", function () {
+            let id = $(this).data("id");
+            getUserById(id).then(() => {
+                $.ajax({
+                    headers: {
+                        "accept": "application/json",
+                        "content-type": "application/json"
+                    },
+                    type: "PUT",
+                    url: "http://localhost:8080/api/users/update/active",
+                    data: JSON.stringify(user)
+                }).done((data) => {
+                    App.SweetAlert.showSuccessAlert("Status changed to active")
+                    let currentRow = $("#tr_" + data.id);
+                    let rowUpdate = `
+                <tr id="tr_${data.id}">
+                    <td>${data.id}</td>
+                    <td>${data.fullName}</td>
+                    <td>${data.phone}</td>
+                    <td>${data.username}</td>
+                    <td>${data.role.code}</td>
+                    <td>${data.status}</td>
+                    <td><button data-id="${user.id}" class="btn btn-secondary btn-update"><i class="fas fa-pen-square"></i>Update</button></td>
+                    <td><button data-id="${user.id}" class="btn btn-danger btn-delete"><i class="far fa-trash-alt"></i>Delete</button></td>
+                    <td><button data-id="${user.id}" class="btn btn-success btn-active"><i class="fas fa-unlock"></i>Active</button></td>
+                    <td><button data-id="${user.id}" class="btn btn-warning btn-block"><i class="fas fa-lock"></i>Block</button></td>
+                </tr>
+            `
+                    currentRow.replaceWith(rowUpdate);
+                    handleShowModalCreate()
+                    handleShowModalUpdate()
+                    handlerShowConfirmDelete()
+                    unBindAll();
+                    doBlock()
+                    doActive()
+                }).fail((jqXHR) => {
+                    console.log(jqXHR);
+                    if (jqXHR.status === 403) {
+                        let msg = "You are not authorized to perform this function !!";
+                        App.SweetAlert.showErrorAlert(msg)
+
+                    }
+                    else {
+                        App.IziToast.showErrorAlert("Status change failed");
+
+                    }
+                })
+            })
+        })
+    }
+
+    function doBlock() {
+        $(".btn-block").on("click", function () {
+            let id = $(this).data("id");
+            getUserById(id).then(() => {
+                $.ajax({
+                    headers: {
+                        "accept": "application/json",
+                        "content-type": "application/json"
+                    },
+                    type: "PUT",
+                    url: "http://localhost:8080/api/users/update/block",
+                    data: JSON.stringify(user)
+                }).done((data) => {
+                    App.SweetAlert.showSuccessAlert("Status changed to block")
+                    let currentRow = $("#tr_" + data.id);
+                    let rowUpdate = `
+             <tr id="tr_${data.id}">y
+                    <td>${data.id}</td>
+                    <td>${data.fullName}</td>
+                    <td>${data.phone}</td>
+                    <td>${data.username}</td>
+                    <td>${data.role.code}</td>
+                    <td>${data.status}</td>
+                     <td><button data-id="${user.id}" class="btn btn-secondary btn-update"><i class="fas fa-pen-square"></i>Update</button></td>
+                    <td><button data-id="${user.id}" class="btn btn-danger btn-delete"><i class="far fa-trash-alt"></i>Delete</button></td>
+                    <td><button data-id="${user.id}" class="btn btn-success btn-active"><i class="fas fa-unlock"></i>Active</button></td>
+                    <td><button data-id="${user.id}" class="btn btn-warning btn-block"><i class="fas fa-lock"></i>Block</button></td>
+                </tr>
+            `
+                    currentRow.replaceWith(rowUpdate);
+
+                    handleShowModalCreate()
+                    handleShowModalUpdate()
+                    handlerShowConfirmDelete()
+                    unBindAll();
+                    doBlock()
+                    doActive()
+                }).fail((jqXHR) => {
+                    console.log(jqXHR);
+                    if (jqXHR.status === 403) {
+                        let msg = "You are not authorized to perform this function !!";
+                        App.SweetAlert.showErrorAlert(msg)
+
+                    }
+                    else {
+                        App.IziToast.showErrorAlert("Status change failed");
+
+                    }
+                })
+            })
+        })
+    }
+
+    function unBindAll() {
+        $(".btn-active").off();
+        $(".btn-block").off();
+    }
+
+    loadAllUser();
+    handleShowModalCreate()
+    handleShowModalUpdate()
+    handlerShowConfirmDelete()
+</script>
+
+</body>
+</html>

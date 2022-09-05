@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<th:block th:fragment="left-side">
+    <div class="left-side-menu">
+        <div class="slimscroll-menu">
+            <div id="sidebar-menu">
+                <ul class="metismenu" id="side-menu">
+                    <li>
+                        <a href="/users">
+                            <i class="fas fa-user"></i>
+                            <span> Users management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/products">
+                            <i class="fab fa-product-hunt"></i>
+                            <span> Products management </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="mdi mdi-google-pages"></i>
+                            <span> Order management</span>
+                        </a>
+                    </li>
+                </ul>
+                <div>
+                    <img style="width: 250px; height: 390px" src="/assets/images/imagee.jpg">
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</th:block>
