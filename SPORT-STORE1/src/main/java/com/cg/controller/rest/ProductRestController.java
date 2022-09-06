@@ -31,8 +31,9 @@ public class ProductRestController {
     @Autowired
     private ICategoryService categoryService;
 
-@Autowired
-private AppUtils appUtils;
+    @Autowired
+    private AppUtils appUtils;
+
     @GetMapping
     public ResponseEntity<?> showListProduct() {
         List<ProductDTO> products = productService.findAllProductDTO();
@@ -57,7 +58,7 @@ private AppUtils appUtils;
     @PostMapping("/create")
     public ResponseEntity<?> doCreate(@Validated @RequestBody ProductDTO productDTO, BindingResult bindingResult) {
 
-          new ProductDTO().validate(productDTO, bindingResult);
+        new ProductDTO().validate(productDTO, bindingResult);
 
         if (bindingResult.hasErrors()) {
             return appUtils.mapErrorToResponse(bindingResult);
@@ -77,7 +78,7 @@ private AppUtils appUtils;
 
     @PutMapping("/edit/{id}")
     @PreAuthorize("hasAnyAuthority('ADMIN')")
-    public ResponseEntity<?> doEdit(@PathVariable Long id,@Validated @RequestBody ProductDTO productDTO,
+    public ResponseEntity<?> doEdit(@PathVariable Long id, @Validated @RequestBody ProductDTO productDTO,
                                     BindingResult bindingResult) {
         Optional<Product> p = productService.findById(id);
 
@@ -85,7 +86,7 @@ private AppUtils appUtils;
             return new ResponseEntity<>("Không tồn tại sản phẩm", HttpStatus.NOT_FOUND);
         }
 
-        new ProductDTO().validate(productDTO,bindingResult);
+        new ProductDTO().validate(productDTO, bindingResult);
 
         if (bindingResult.hasErrors()) {
             return appUtils.mapErrorToResponse(bindingResult);
@@ -110,18 +111,24 @@ private AppUtils appUtils;
 
     @DeleteMapping("/block/{id}")
     @PreAuthorize("hasAnyAuthority('ADMIN')")
-    public ResponseEntity<?> doBlock(@PathVariable Long id, @Validated @RequestBody ProductDTO productDTO, BindingResult bindingResult){
+    public ResponseEntity<?> doBlock(@PathVariable Long id, @Validated @RequestBody ProductDTO productDTO, BindingResult bindingResult) {
 
-        if(bindingResult.hasErrors()){
+        if (bindingResult.hasErrors()) {
             return appUtils.mapErrorToResponse(bindingResult);
         }
 
-        try{
+        try {
             productService.deleteProductById(id);
 
-            return new ResponseEntity<>(id,HttpStatus.OK);
-        }catch (Exception e){
+            return new ResponseEntity<>(id, HttpStatus.OK);
+        } catch (Exception e) {
             return new ResponseEntity<>("Server không xử lý được", HttpStatus.INTERNAL_SERVER_ERROR);
         }
+    }
+
+    @GetMapping("/search/{query}")
+    public ResponseEntity<?> searchListProduct(@PathVariable String query) {
+        List<ProductDTO> productDTOList = productService.findProductByValue(query);
+        return new ResponseEntity<>(productDTOList, HttpStatus.OK);
     }
 }

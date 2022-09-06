@@ -62,4 +62,8 @@ public class ProductServiceImpl implements IProductService{
     public void softDelete(Product product) {
 
     }
+    @Override
+    public List<ProductDTO> findProductByValue(String query) {
+        return productRepository.findProductValue(query);
+    }
 }

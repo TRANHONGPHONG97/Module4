@@ -82,7 +82,6 @@ public class UserRestController {
     }
 
 
-
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> doDelete (@PathVariable Long id){
         Optional<User> userDTO = userService.findByUserIdUser(id);
